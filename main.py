@@ -46,6 +46,7 @@ def get_chat_response(message):
     # Obtener la respuesta del modelo de chat
     intents_list = predict_class(message)
     response = get_response(intents_list, intents)
+    print("Chat Response:", response) 
     return response
 
 #main------------------------------------------------------------------------------------
