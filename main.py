@@ -1,7 +1,7 @@
 from config.config import *
 import os
 import json
-from src.chat import predict_class, get_response
+from src.chat import *
 import telebot
 from flask import Flask, request
 import time
@@ -41,17 +41,10 @@ def cmd_start(message):
 # Gestión de mensajes
 @bot.message_handler(content_types=['text'])
 def bot_texto(message):
-    # Obtener la respuesta del chat
-    response = get_chat_response(message.text)
-    # Enviar la respuesta al usuario
-    bot.send_message(message.chat.id, response)
-
-def get_chat_response(message):
-    # Obtener la respuesta del modelo de chat
-    intents_list = predict_class(message)
-    response = get_response(intents_list, intents)
-    logger.info("Chat Response: %s", response)
-    return response
+  ints = predict_class(message.text)
+  res = get_response(ints, intents)
+  
+  bot.send_message(message.chat.id, res, parse_mode="html")
 
 #main------------------------------------------------------------------------------------
 if __name__ == '__main__':
