@@ -63,6 +63,11 @@ def get_response(intents_list, training_json):
             break
     return result
 
+ints_prueba = predict_class("Hola")
+res_prueba = get_response(ints_prueba, intents)
+print(res_prueba)
+
+
 #------------------------------------------------------------------------------
 
 #instancia del bot
@@ -90,10 +95,6 @@ def bot_texto(message):
   res = get_response(ints, intents)
   bot.send_message(message.chat.id, res, parse_mode="html")
 
-#Gestión de mensajes
-#@bot.message_handler(content_types = ['text'])
-#def bot_texto(message):
-#    bot.send_message(message.chat.id, message.text, parse_mode = "html")
 
 
 #main------------------------------------------------------------------------------------
