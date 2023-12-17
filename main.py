@@ -11,6 +11,7 @@ import numpy as np
 from tensorflow import keras
 import nltk
 nltk.download('punkt')
+nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 import h5py
 from keras.models import load_model
