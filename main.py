@@ -6,6 +6,10 @@ import telebot
 from flask import Flask, request
 import time
 from waitress import serve
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 #instancia del bot
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
@@ -46,7 +50,7 @@ def get_chat_response(message):
     # Obtener la respuesta del modelo de chat
     intents_list = predict_class(message)
     response = get_response(intents_list, intents)
-    print("Chat Response:", response) 
+    logger.info("Chat Response: %s", response)
     return response
 
 #main------------------------------------------------------------------------------------
@@ -55,6 +59,5 @@ if __name__ == '__main__':
     bot.remove_webhook()
     time.sleep(1)
     bot.set_webhook(WEBHOOK_URL)
-    print(WEBHOOK_URL)
     # Inicia el servidor Flask
     serve(web_server, host="0.0.0.0", port = 5000)
