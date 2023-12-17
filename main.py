@@ -19,10 +19,7 @@ words_path = os.path.join('data', 'words.pkl')
 classes_path = os.path.join('data', 'classes.pkl')
 json_path = os.path.join('training_data', 'training.json')
 model_path = os.path.join('models','chat_model.h5')
-print(words_path)
-print(classes_path)
-print(json_path)
-print(model_path)
+
 
 lematizer = WordNetLemmatizer()
 intents = json.loads(open(json_path, encoding='utf-8').read())
@@ -81,19 +78,17 @@ def web_hook():
         bot.process_new_updates([update])
         return "OK", 200
 
+#Comando start
+@bot.message_handler(commands=['start'])
+def cmd_start(message):
+    bot.send_message(message.chat.id, "Hola", parse_mode = "html")
+
 # Gestión de mensajes
 @bot.message_handler(content_types=['text'])
 def bot_texto(message):
   ints = predict_class(message.text)
   res = get_response(ints, intents)
-  print(res)
   bot.send_message(message.chat.id, res, parse_mode="html")
-
-
-#Comando start
-@bot.message_handler(commands=['start'])
-def cmd_start(message):
-    bot.send_message(message.chat.id, "Hola", parse_mode = "html")
 
 #Gestión de mensajes
 #@bot.message_handler(content_types = ['text'])
