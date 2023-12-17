@@ -35,5 +35,4 @@ if __name__ == '__main__':
     bot.set_webhook(WEBHOOK_URL)
     print(WEBHOOK_URL)
     # Inicia el servidor Flask
-    #serve(web_server, host="0.0.0.0", port = 5000)
-    web_server.run()
+    serve(web_server, host="0.0.0.0", port = 5000)
