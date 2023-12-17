@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # Configura el webhook
     bot.remove_webhook()
     time.sleep(1)
-    bot.setWebhook(WEBHOOK_URL)
+    bot.set_webhook(WEBHOOK_URL)
 
     # Inicia el servidor Flask
     web_server.run(host="0.0.0.0", port = 5000)
