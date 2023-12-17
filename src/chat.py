@@ -1,3 +1,4 @@
+""""
 import os
 import random
 import json
@@ -57,7 +58,7 @@ def get_response(intents_list, training_json):
             result = random.choice(i['responses'])
             break
     return result
-""""
+
 print("GO Bot is running!")
 
 while True:
