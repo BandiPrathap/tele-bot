@@ -9,7 +9,7 @@ bot = telebot.TeleBot(TELEGRAM_TOKEN)
 web_server = Flask(__name__)
 
 #Gestiona las pesticones POST enviadas el servidor
-@web_server.route('/', methods = ['POST '])
+@web_server.route('/', methods = ['POST'])
 def web_hook():
     if request.headers.get("content-type") == "application/json":
         update = telebot.types.Update.de_json(request.stream.read().decode('utf-8'))
