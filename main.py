@@ -2,6 +2,7 @@ from config.config import *
 import telebot
 from flask import Flask, request
 import time
+from waitress import serve
 
 #instancia del bot
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
@@ -34,4 +35,4 @@ if __name__ == '__main__':
     bot.set_webhook(WEBHOOK_URL)
 
     # Inicia el servidor Flask
-    web_server.run(host="0.0.0.0", port = 5000)
+    serve(web_server, host="0.0.0.0", port = 5000)
