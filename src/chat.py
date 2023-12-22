@@ -5,13 +5,13 @@ import pickle
 import numpy as np
 from tensorflow import keras
 import nltk
-from nltk.stem import WordNetLemmatizer
-import h5py
 nltk.download('punkt')
 nltk.download('wordnet')
-
+from nltk.stem import WordNetLemmatizer
+import h5py
 from keras.models import load_model
 
+#------------------------------------------------------------------------------------------
 # Ruta de archivos
 words_path = os.path.join('data', 'words.pkl')
 classes_path = os.path.join('data', 'classes.pkl')
@@ -59,14 +59,3 @@ def get_response(intents_list, training_json):
             result = random.choice(i['responses'])
             break
     return result
-
-"""
-print("GO Bot is running!")
-
-while True:
-    message = input("")
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
-
-"""
