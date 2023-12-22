@@ -10,6 +10,7 @@ nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 import h5py
 from keras.models import load_model
+import unicodedata
 
 #------------------------------------------------------------------------------------------
 # Ruta de archivos
