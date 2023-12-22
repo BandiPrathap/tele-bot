@@ -74,9 +74,11 @@ def get_response(intents_list, training_json):
     return result
 
 #para pruebas del modelo--------------------------------
+"""
 print("GO Bot is running!") 
 while True:
      message = input("") 
      ints = predict_class(message)
      res = get_response(ints, intents) 
      print(res)
+"""
