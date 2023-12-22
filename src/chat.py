@@ -47,13 +47,15 @@ def predict_class(sentence):
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
     ERROR_THRESOLD = 0.7
+    print(res)
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESOLD]
 
     # Verifica si hay alguna predicción con suficiente confianza
     if not results:
         return [{"intent": "desconocido", "probability": "1.0"}]
-
+        
     results.sort(key = lambda x: x[1], reverse=True)
+    
     return_list = []
     for r in results:
         return_list.append({'intent':classes[r[0]], 'probability': str(r[1])})
@@ -70,3 +72,11 @@ def get_response(intents_list, training_json):
             result = "No he entendido tu pregunta, sé más específico"
             break
     return result
+
+#para pruebas del modelo--------------------------------
+print("GO Bot is running!") 
+while True:
+     message = input("") 
+     ints = predict_class(message)
+     res = get_response(ints, intents) 
+     print(res)
