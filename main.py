@@ -25,12 +25,17 @@ def web_hook():
 def cmd_start(message):
     bot.send_message(message.chat.id, "Hola", parse_mode = "html")
 
+ints_prueba = predict_class("Hola") 
+res_prueba = get_response(ints_prueba, intents) 
+print(res_prueba)
+
 # Gestión de mensajes
 @bot.message_handler(content_types=['text'])
 def bot_texto(message):
   ints = predict_class(message.text)
   res = get_response(ints, intents)
   bot.send_message(message.chat.id, res, parse_mode="html")
+
 
 #main------------------------------------------------------------------------------------
 if __name__ == '__main__':
