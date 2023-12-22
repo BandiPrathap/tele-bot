@@ -31,6 +31,9 @@ def clean_up_sentence(sentence):
     return sentence_words
 
 def bag_of_words(sentence):
+    sentence = sentence.lower()  # Convierte el texto a minúsculas
+    sentence = ''.join((c for c in unicodedata.normalize('NFD', sentence) if unicodedata.category(c) != 'Mn'))  # Eliminar tildes
+    sentence_words = nltk.word_tokenize(sentence)
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(words)
     for w in sentence_words:
@@ -42,8 +45,12 @@ def bag_of_words(sentence):
 def predict_class(sentence):
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
-    ERROR_THRESOLD = 0.25
+    ERROR_THRESOLD = 0.7
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESOLD]
+
+    # Verifica si hay alguna predicción con suficiente confianza
+    if not results:
+        return [{"intent": "desconocido", "probability": "1.0"}]
 
     results.sort(key = lambda x: x[1], reverse=True)
     return_list = []
@@ -57,5 +64,8 @@ def get_response(intents_list, training_json):
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
+            break
+        elif tag == "desconocido":
+            result = "No he entendido tu pregunta, sé más específico"
             break
     return result
