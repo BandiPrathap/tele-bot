@@ -1,15 +1,19 @@
 from config.config import *
+from src.chat import predict_class, get_response, intents
 import telebot
 from flask import Flask, request
 import time
 from waitress import serve
+import json
+"""
 import os
 import random
-import json
+
 import pickle
 import numpy as np
 from tensorflow import keras
 import nltk
+
 nltk.download('punkt')
 nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
@@ -21,10 +25,10 @@ words_path = os.path.join('data', 'words.pkl')
 classes_path = os.path.join('data', 'classes.pkl')
 json_path = os.path.join('training_data', 'training.json')
 model_path = os.path.join('models','chat_model.h5')
-
-
 lematizer = WordNetLemmatizer()
+
 intents = json.loads(open(json_path, encoding='utf-8').read())
+
 words = pickle.load(open(words_path, 'rb'), encoding='latin1')
 classes = pickle.load(open(classes_path, 'rb'), encoding='latin1')
 with h5py.File(model_path, 'r') as file:
@@ -64,12 +68,7 @@ def get_response(intents_list, training_json):
             result = random.choice(i['responses'])
             break
     return result
-
-ints_prueba = predict_class("Hola")
-res_prueba = get_response(ints_prueba, intents)
-print(res_prueba)
-
-
+"""
 #------------------------------------------------------------------------------
 
 #instancia del bot

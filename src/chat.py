@@ -1,4 +1,3 @@
-""""
 import os
 import random
 import json
@@ -8,6 +7,8 @@ from tensorflow import keras
 import nltk
 from nltk.stem import WordNetLemmatizer
 import h5py
+nltk.download('punkt')
+nltk.download('wordnet')
 
 from keras.models import load_model
 
@@ -59,10 +60,13 @@ def get_response(intents_list, training_json):
             break
     return result
 
+"""
 print("GO Bot is running!")
 
 while True:
     message = input("")
     ints = predict_class(message)
     res = get_response(ints, intents)
-    print(res)"""
+    print(res)
+
+"""
