@@ -1,5 +1,5 @@
 from config import *
-from user.user_verification import generate_otp, send_otp_email
+from src.user.user_verification import generate_otp, send_otp_email
 from config.database import connect_to_db
 import re
 
