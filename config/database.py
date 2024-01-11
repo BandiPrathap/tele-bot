@@ -1,4 +1,4 @@
-from config import DATABASE_URL
+from config.config import DATABASE_URL
 import psycopg2
 
 def connect_to_db():
