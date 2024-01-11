@@ -1,19 +1,59 @@
 {
-    "intents":[
+    "intents": [
         {
             "tag": "saludo",
             "patterns": ["hola", "que tal", "como estas", "saludos"],
-            "responses": ["¡Hola!", "Buenos días", "Hola, ¿En qué puedo ayudarte?"]
+            "responses": ["Hola", "Buenos dias", "Hola En que puedo ayudarte"]
         },
-        {   
+        {
             "tag": "agradecimiento",
-            "patterns": ["gracias", "muchas gracias", "eso es todo, gracias", "gracias por la ayuda"],
+            "patterns": ["gracias", "muchas gracias", "eso es todo gracias", "gracias por la ayuda"],
             "responses": ["Fue un placer", "Fue un placer ayudarte"]
         },
-        {   
+        {
             "tag": "despedida",
             "patterns": ["chao", "adios", "bye", "hasta luego", "hasta pronto"],
-            "responses": ["Adiós, espero haber sido de utilidad", "Adiós, hasta la próxima", "Adiós, estaré aquí si tienes otra duda"]
+            "responses": ["Adios espero haber sido de utilidad", "Adios hasta la proxima", "Adios estare aqui si tienes otra duda"]
+        },
+        {
+            "tag": "consulta_general",
+            "patterns": ["que puedes hacer", "explicame tus funciones", "cuentame mas sobre ti"],
+            "responses": ["Soy un chatbot disenado para ayudarte Puedo responder preguntas proporcionar informacion y mas"]
+        },
+        {
+            "tag": "ayuda",
+            "patterns": ["necesito ayuda", "puedes ayudarme", "no entiendo", "que hago"],
+            "responses": ["Claro estare encantado de ayudarte Por favor dime cual es tu pregunta o problema"]
+        },
+        {
+            "tag": "agradecimiento_adicional",
+            "patterns": ["gracias por tu ayuda", "excelente servicio", "te estoy agradecido", "gracias por ser tan util"],
+            "responses": ["De nada", "Es un placer ayudar Hay algo mas en lo que pueda asistirte"]
+        },
+        {
+            "tag": "informacion",
+            "patterns": ["cuentame mas", "dime mas informacion", "explicame"],
+            "responses": ["Soy un chatbot inteligente creado para proporcionar asistencia y responder preguntas En que puedo ayudarte hoy"]
+        },
+        {
+            "tag": "despedida_amigable",
+            "patterns": ["hasta luego amigo", "nos vemos", "hasta la proxima", "adios amigo"],
+            "responses": ["Hasta luego que tengas un excelente dia", "Nos vemos Siempre estoy aqui si necesitas algo"]
+        },
+        {
+            "tag": "solicitud_informacion",
+            "patterns": ["necesito informacion sobre", "donde puedo encontrar informacion sobre", "hablame acerca de"],
+            "responses": ["Puedo proporcionarte informacion sobre eso En que especificamente estas interesado"]
+        },
+        {
+            "tag": "agradecimiento_personalizado",
+            "patterns": ["gracias por tu atencion", "te agradezco personalmente", "excelente servicio personalizado"],
+            "responses": ["Estoy aqui para ayudar Si tienes mas preguntas no dudes en preguntar"]
+        },
+        {
+            "tag": "curiosidad",
+            "patterns": ["tengo curiosidad", "cuentame algo interesante", "dime un dato curioso"],
+            "responses": ["Claro Sabias que", "Aqui tienes un dato interesante", "La curiosidad es genial Sabias que"]
         }
     ]
 }
