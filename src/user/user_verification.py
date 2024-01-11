@@ -1,7 +1,7 @@
 import pyotp
 import smtplib
 from email.mime.text import MIMEText
-from config import EMAIL_SENDER, EMAIL_PASSWORD
+from config.config import EMAIL_SENDER, EMAIL_PASSWORD
 
 def generate_otp():
     """Genera un OTP con una duración de 5 minutos."""
