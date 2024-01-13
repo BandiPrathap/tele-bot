@@ -72,14 +72,14 @@ def get_response(intents_list, training_json):
             result = "No he entendido tu pregunta, sé más específico"
             break
     return result
-
+"""
 print("GO Bot is running!")
 while True:
      message = input("")
      ints = predict_class(message)
      res = get_response(ints, intents)
      print(res)
-
+"""
 """import os
 import random
 import json
