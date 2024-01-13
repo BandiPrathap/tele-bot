@@ -12,8 +12,8 @@ from nltk.stem import WordNetLemmatizer
 # Ruta de archivos
 words_path = os.path.join('data', 'words.pkl')
 classes_path = os.path.join('data', 'classes.pkl')
-json_path = os.path.join('training_data', 'training.json')
-model_path = os.path.join('models','chat_model.h5')
+json_path = os.path.join('training_data', 'training_joto.json')
+model_path = os.path.join('models','chat_model_val.h5')
 
 # Inicializando el lematizador
 lemmatizer = WordNetLemmatizer()

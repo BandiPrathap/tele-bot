@@ -1,0 +1,639 @@
+{
+    "intents":[
+        {
+            "tag": "saludo",
+            "patterns": [
+                "hola", 
+                "que tal", 
+                "como estas", 
+                "saludos", 
+                "buen dia",
+                "buenas", 
+                "buenas tardes", 
+                "buenas noches", 
+                "que onda", 
+                "como te va", 
+                "como va todo", 
+                "que hay de nuevo", 
+                "hey", 
+                "hola hola", 
+                "que pasa", 
+                "como andas", 
+                "que hay"],
+            "responses": ["¡Hola!", "Buenos días", "Hola, ¿En qué puedo ayudarte?"]
+        },
+        {
+            "tag": "agradecimiento",
+            "patterns": [
+                "gracias", 
+                "muchas gracias", 
+                "eso es todo, gracias", 
+                "gracias por la ayuda", 
+                "te agradezco", 
+                "agradecido", 
+                "mil gracias", 
+                "agradezco mucho", 
+                "gracias por todo", 
+                "te lo agradezco", 
+                "agradecido contigo", 
+                "gracias de antemano", 
+                "gracias por tu ayuda", 
+                "gracias por tu tiempo"],
+            "responses": ["Fue un placer", "Fue un placer ayudarte", "De nada"]
+        },
+        {
+            "tag": "despedida",
+            "patterns": [
+                "chao", 
+                "adios", 
+                "bye", 
+                "hasta luego", 
+                "hasta pronto", 
+                "nos vemos", 
+                "hasta la proxima", 
+                "cuidate", 
+                "hasta otra", 
+                "hasta entonces", 
+                "nos hablamos", 
+                "hasta mañana", 
+                "que estes bien", 
+                "me despido", 
+                "me voy"],
+            "responses": ["Adiós, espero haber sido de utilidad", "Adiós, hasta la próxima", "Adiós, estaré aquí si tienes otra duda"]
+        },
+        {
+            "tag": "ingles_ubicacion_info_inscrip",
+            "patterns": [
+                "hasta cuando puedo dar el examen de ubicacion",
+                "como puedo inscribirme en el examen de ubicacion",
+                "cuando son las inscripciones del examen de ubicacion",
+                "fecha limite para examen de ubicacion",
+                "proceso de inscripcion para el examen de ubicacion",
+                "plazo para inscribirse en examen de ubicacion",
+                "informacion sobre examen de ubicacion",
+                "detalles de la inscripcion del examen de ubicacion de ingles",
+                "cuando puedo rendir el examen de ubicacion",
+                "fechas para el examen de ubicacion",
+                "como registrarse para el examen de ubicacion",
+                "periodo de inscripcion para examen de ubicacion",
+                "cuando se cierran las inscripciones para el examen de ubicacion",
+                "instrucciones para inscripcion en examen de ubicacion",
+                "informacion para inscribirse en examen de ubicacion"
+            ],
+            "responses": [
+                "La inscripción para el examen de ubicación se realiza mediante la plataforma SIUG en las fechas publicadas en las paginas oficiales segun cada periodo académico."
+            ]
+        },
+        {
+            "tag": "ingles_ubicacion_info_que_es",
+            "patterns": [
+                "que es el examen de ubicacion",
+                "para que sirve el examen de ubicacion",
+                "como saber si puedo dar el examen de ubicacion",
+                "detalle del examen de ubicacion",
+                "cual es el proposito del examen de ubicacion",
+                "en que consiste el examen de ubicacion",
+                "que evalua el examen de ubicacion",
+                "por que deberia tomar el examen de ubicacion",
+                "beneficios de dar el examen de ubicacion",
+                "es necesario dar el examen de ubicacion",
+                "quien puede rendir el examen de ubicacion",
+                "requisitos para el examen de ubicacion",
+                "que se hace en el examen de ubicacion",
+                "cual es la importancia del examen de ubicacion"
+            ],
+            "responses": [
+                "El examen de ubicación puede ser dado por cualquier estudiante dentro del primer año de estudios con el fin de evaluar sus conocimientos y ser asignado al adecuado dentro del programa modular"
+            ]
+        },
+        {
+            "tag": "ingles_validación_info_inscrip",
+            "patterns": [
+                "hasta cuando puedo dar el examen de validacion",
+                "como puedo inscribirme en el examen de validacion",
+                "cuando son las inscripciones del examen de validacion",
+                "fecha limite para examen de validacion",
+                "proceso de inscripcion para el examen de validacion",
+                "plazo para inscribirse en examen de validacion",
+                "informacion sobre examen de validacion",
+                "detalles del examen de validacion de ingles",
+                "cuando puedo rendir el examen de validacion de ingles",
+                "fechas para el examen de validacion de ingles",
+                "como registrarse para el examen de validacion de ingles",
+                "periodo de inscripcion para examen de validacion",
+                "cuando se cierran las inscripciones para el examen de validacion",
+                "instrucciones para inscripcion en examen de validacion",
+                "informacion para inscribirse en examen de validacion",
+                "requisitos para el examen de validacion",
+                "donde inscribirse para el examen de validacion",
+                "procedimiento para inscripcion en examen de validacion",
+                "fechas de inscripcion para el examen de validacion",
+                "plazos de inscripcion para el examen de validacion"
+            ],
+            "responses": [
+                "La inscripción para el examen de validación se realiza mediante la plataforma SIUG en las fechas publicadas en las paginas oficiales segun cada periodo académico."
+            ]
+        },
+        {
+            "tag": "ingles_validacion_info_que_es",
+            "patterns": [
+                "que es el examen de validacion",
+                "para que sirve el examen de validacion",
+                "como saber si puedo dar el examen de validacion",
+                "que es el examen de validacion de ingles",
+                "para que sirve el examen de validacion de ingles",
+                "informacion sobre el examen de validacion",
+                "detalle del examen de validacion",
+                "cual es el proposito del examen de validacion",
+                "en que consiste el examen de validacion",
+                "que evalua el examen de validacion",
+                "por que deberia tomar el examen de validacion",
+                "beneficios de dar el examen de validacion",
+                "es necesario dar el examen de validacion",
+                "quien puede rendir el examen de validacion",
+                "requisitos para el examen de validacion",
+                "que se hace en el examen de validacion",
+                "cual es la importancia del examen de validacion",
+                "como me preparo para el examen de validacion",
+                "que temas cubre el examen de validacion",
+                "cuales son los criterios del examen de validacion"
+            ],
+            "responses": [
+                "El examen de validación puede ser dado por cualquier estudiante de acuerdo a los periodos académicos con el fin de evaluar sus conocimientos del módulo de ingles correspondiente y aprovar el módulo mediante el proceso. Solo se puede realizar un examén por periodo lectivo y en caso de fallar deberá registrarce como segunda matrícula."
+            ]
+        },
+        {
+            "tag": "postgrado_gratuidad",
+            "patterns": [
+                "aplica la gratuidad a materias de postgrado",
+                "el proceso de postgrado tiene gratuidad",
+                "que pagos deben hacerce para materias de postgrado",
+                "que valores corresponden al proceso de postgrado",
+                "los cursos de postgrado son gratuitos",
+                "hay gratuidad en los programas de postgrado",
+                "costo de estudios de postgrado",
+                "financiamiento para postgrado",
+                "se paga por cursar un postgrado",
+                "existe algun beneficio de gratuidad en postgrado",
+                "tarifas de matricula para postgrado",
+                "costos asociados a postgrado",
+                "postgrado es gratuito o pagado",
+                "como se financia un postgrado",
+                "hay que pagar por los estudios de postgrado",
+                "cuanto cuesta un programa de postgrado",
+                "postgrado tiene algun costo",
+                "aranceles de postgrado",
+                "precio de los cursos de postgrado",
+                "es gratis estudiar un postgrado"
+            ],
+            "responses": [
+                "La gratuidad de los procesos solo se refieren a los niveles de educación inicial, básica, bachillerato y pregrado, para los estudios de postgrado se debe pagar obligatoriamente los valores de matrícula y aranceles establecidos para cada programa"
+            ]
+        },
+        {
+            "tag": "pregrado_gratuidad",
+            "patterns": [
+                "las materias de la universidad tienen valor alguno",
+                "que cubre la gratuidad de la universidad de guayaquil",
+                "como puedo saber si aplico para la gratuidad",
+                "si me matriculo por primera vez debo pagar las materias",
+                "debo pagar por las materias de la universidad de guayaquil",
+                "cuanto es el costo de las materias de la universidad de guayaquil",
+                "la universidad de guayaquil ofrece gratuidad en sus cursos",
+                "todos los cursos de pregrado son gratuitos en la universidad de guayaquil",
+                "hay costos ocultos en la gratuidad de la universidad",
+                "como funciona la gratuidad en la universidad de guayaquil",
+                "requisitos para acceder a la gratuidad en la universidad",
+                "la gratuidad aplica para todas las materias",
+                "beneficios de la gratuidad en la universidad de guayaquil",
+                "gratuidad para estudiantes de primer ingreso",
+                "condiciones de la gratuidad en la universidad de guayaquil",
+                "la gratuidad cubre todos los gastos en la universidad",
+                "cual es el alcance de la gratuidad en la universidad",
+                "gratuidad para estudiantes regulares en la universidad de guayaquil",
+                "excepciones en la política de gratuidad de la universidad de guayaquil"
+            ],
+            "responses": [
+                "La gratuidad de la educación superior beneficia a todos los estudiantes que cursan por primera vez el programa de nivelación, estudiantes regulares que cursan por primera vez una materia, estudiantes que cambian por primera vez de carrera con materias aprovadas homologadas."
+            ]
+        },
+        {
+            "tag": "pregrado_gratuidad_perdida",
+            "patterns": [
+                "como se si perdi la gratuidad de las materias",
+                "cuando no es aplicable la gratuidad",
+                "es posible perder la gratuidad",
+                "creo que perdi la gratuidad",
+                "cuanto debo pagar por materia perdida",
+                "bajo que condiciones se pierde la gratuidad",
+                "perdi alguna materia, aun tengo gratuidad",
+                "criterios para perder la gratuidad en la universidad",
+                "la gratuidad se mantiene si repruebo una materia",
+                "que pasa con la gratuidad si cambio de carrera",
+                "pierdo la gratuidad si me retiro de una materia",
+                "consecuencias de no cumplir con el plan de estudios para la gratuidad",
+                "la gratuidad se pierde en segundas matriculas",
+                "situaciones en las que se pierde la gratuidad universitaria",
+                "como afecta una baja academica a la gratuidad",
+                "puedo recuperar la gratuidad si la pierdo",
+                "costos por perder la gratuidad en la universidad",
+                "limitaciones de la gratuidad en la educación superior"
+            ],
+            "responses": [
+                "La gratuidad de la educación superior se pierde en caso de perdida de materias por la falta de horas del plan de estudio, la gratuidad no es aplicable para segundas y terceras matriculas, matriculas extraordinarias o especiales salvo casos de fuerza mayor. En caso de perdida de gratuidad el alumno debera cancelar los valores dados según las tablas de reglamento. Estos valores se pueden consultar desde el Sistema Integrado de la Universidad de Guayaquil (SIUG)"
+            ]
+        },
+        {
+            "tag": "valores_pagar_primera_matricula",
+            "patterns": [
+                "si pierdo la gratuidad y me matriculo por primera vez cuanto debo pagar",
+                "cuanto cuesta la primera matricula de una materia",
+                "cuanto se debe pagar por primera matricula",
+                "cual es el precio de la primera matricula de una materia",
+                "cuanto debo pagar por materia si es la primera vez que me matriculo",
+                "costo de la primera matricula sin gratuidad",
+                "tarifa de matricula para estudiantes sin gratuidad",
+                "precio por credito en la primera matricula",
+                "valor de matricula para estudiantes que perdieron la gratuidad",
+                "coste de inscripcion inicial sin gratuidad",
+                "tarifas de matricula para nueva inscripcion",
+                "precio de matricula para primera vez sin gratuidad",
+                "costos de matriculacion inicial en la universidad",
+                "cuanto se paga en la primera matricula tras perder gratuidad",
+                "valor por credito en primera matricula sin gratuidad",
+                "gastos de primera matricula en universidad publica",
+                "costo de matricula en universidad privada sin gratuidad",
+                "precio de inscripcion por primera vez en universidad",
+                "tarifas aplicables a primera matricula sin beneficio de gratuidad",
+                "cuanto cuesta inscribirse por primera vez sin gratuidad"
+            ],
+            "responses": [
+                "En caso de perdida de gratuidad la primera matrícula se paga de acuerdo a: para instituciones publicas $2.02 por crédito, para instituciones privadas $2.83 por crédito, para segunda carrera $6.06 por crédito. Tomar en consideración que para conocer el valor final deberá multiplicar el valor por crédito según el caso, por el número de créditos de las materias a matricularse."
+            ]
+        },
+        {
+            "tag": "valores_pagar_segunda_matricula",
+            "patterns": [
+                "si pierdo la gratuidad y me matriculo por segunda vez cuanto debo pagar",
+                "cuanto cuesta la segunda matricula de una materia",
+                "cuanto se debe pagar por segunda matricula",
+                "cual es el precio de la segunda matricula de una materia",
+                "cuanto debo pagar por materia si es la segunda vez que me matriculo",
+                "costo de la segunda matricula sin gratuidad",
+                "tarifa de matricula para estudiantes en segunda inscripcion",
+                "precio por credito en la segunda matricula",
+                "valor de matricula para segunda inscripcion sin gratuidad",
+                "coste de reinscripcion sin gratuidad",
+                "tarifas de matricula para segunda inscripcion",
+                "precio de matricula para segunda vez sin gratuidad",
+                "costos de matriculacion en segunda inscripcion en la universidad",
+                "cuanto se paga en la segunda matricula tras perder gratuidad",
+                "valor por credito en segunda matricula sin gratuidad",
+                "gastos de segunda matricula en universidad publica",
+                "costo de matricula en universidad privada en segunda inscripcion",
+                "precio de reinscripcion en universidad",
+                "tarifas aplicables a segunda matricula sin beneficio de gratuidad",
+                "cuanto cuesta reinscribirse sin gratuidad"
+            ],
+            "responses": [
+                "En caso de perdida de gratuidad la segunda matrícula se paga de acuerdo a: para instituciones publicas $3.44 por crédito, para instituciones privadas $4.24 por crédito, para segunda carrera $7.48 por crédito. Para conocer el valor final deberá multiplicar el valor por crédito según el caso, por el número de créditos de las materias a matricularse."
+            ]
+        },
+        {
+            "tag": "valores_pagar_tercera_matricula",
+            "patterns": [
+                "cuanto cuesta la tercera matricula de una materia",
+                "cuanto se debe pagar por tercera matricula",
+                "cual es el precio de la tercera matricula de una materia",
+                "cuanto debo pagar por materia si es la tercera vez que me matriculo",
+                "costo de la tercera matricula sin gratuidad",
+                "tarifa de matricula para estudiantes en tercera inscripcion",
+                "precio por credito en la tercera matricula",
+                "valor de matricula para tercera inscripcion sin gratuidad",
+                "coste de tercera inscripcion sin gratuidad",
+                "tarifas de matricula para tercera inscripcion",
+                "precio de matricula para tercera vez sin gratuidad",
+                "costos de matriculacion en tercera inscripcion en la universidad",
+                "cuanto se paga en la tercera matricula tras perder gratuidad",
+                "valor por credito en tercera matricula sin gratuidad",
+                "gastos de tercera matricula en universidad publica",
+                "costo de matricula en universidad privada en tercera inscripcion",
+                "precio de tercera inscripcion en universidad",
+                "tarifas aplicables a tercera matricula sin beneficio de gratuidad",
+                "cuanto cuesta reinscribirse por tercera vez sin gratuidad",
+                "costo por crédito en tercera matrícula para estudiantes sin gratuidad"
+            ],
+            "responses": [
+                "En caso de perdida de gratuidad la tercera matrícula se paga de acuerdo a: para instituciones publica $4.85 por crédito, para instituciones privadas $5.66 por crédito, para segunda carrera $9.10 por crédito. Para conocer el valor final debera multiplicar el valor por crédito según el caso, por el número de créditos de las materias a matricularse."
+            ]
+        },
+        {
+            "tag": "bot_info",
+            "patterns": [
+                "que eres",
+                "de donde eres",
+                "porque te usan",
+                "cual es tu finalidad",
+                "cual es tu fin",
+                "me puedes ayudar",
+                "cual es tu proposito",
+                "para que fuiste creado",
+                "que haces",
+                "cual es tu objetivo",
+                "cual es tu rol",
+                "que servicio ofreces",
+                "eres un programa",
+                "eres una inteligencia artificial",
+                "cual es tu funcion",
+                "a que te dedicas",
+                "que tipo de bot eres",
+                "eres un asistente virtual",
+                "para que sirves",
+                "como puedes asistirme"
+            ],
+            "responses": [
+                "Soy el ChatBot de la Universidad de Guayaquil cuya finalidad es ayudar a los alumnos de la Facultad de Ciencias Matemáticas y Físicas"
+            ]
+        },
+        {
+            "tag": "bot_funcionalidad",
+            "patterns": [
+                "para que sirves",
+                "en que me puedes ayudar",
+                "que informacion proporcionas",
+                "sobre que puedo preguntar",
+                "que informacion puedo solicitar",
+                "que tipo de dudas resuelves",
+                "que tipo de consultas resuelves",
+                "cual es tu utilidad",
+                "que ayuda ofreces a los estudiantes",
+                "puedes darme informacion sobre matriculas",
+                "ofreces informacion sobre aranceles",
+                "como me puedes asistir en la carrera de software",
+                "eres util para los estudiantes de software",
+                "puedes resolver preguntas sobre la universidad",
+                "tienes informacion especifica de la carrera de software",
+                "puedes ayudarme con dudas de matriculas",
+                "que servicios ofreces a los estudiantes de software",
+                "eres un asistente para consultas académicas",
+                "puedo preguntarte sobre costos universitarios",
+                "tienes informacion sobre el proceso de matriculacion"
+            ],
+            "responses": [
+                "Proporciono información sobre matriculas y aranceles a los estudiantes de la Carrera de Software"
+            ]
+        },
+        {
+            "tag": "matriculas_proceso",
+            "patterns": [
+                "donde puedo matricularme",
+                "desde que pagina puedo matricularme",
+                "la universidad cuenta con pagina para matricularse",
+                "como se lleva a cabo el proceso de matricula",
+                "desde donde puedo matricularme",
+                "donde puedo revisar el lugar para matricularme",
+                "necesito matricularme pero no se donde",
+                "hay pagina para matricularse",
+                "debo acercarme a la universidad para matricularme",
+                "no se desde donde debo matricularme",
+                "cual es el procedimiento para matricularme",
+                "instrucciones para la matriculacion",
+                "como me registro para las clases",
+                "donde encuentro el formulario de matricula",
+                "proceso de matriculacion en linea",
+                "como accedo al sistema SIUG para matricularme",
+                "pasos para matricularse en la universidad",
+                "guia para la matriculacion universitaria",
+                "procedimiento online para matricularse",
+                "como realizar la matricula a traves de SIUG"
+            ],
+            "responses": [
+                "Los estudiantes deberan registrarse en el sistema SIUG de la Universidad de Guayaquil siguiendo los pasos compartidos en las fuentes oficiales a fin de poder realizar los procesos de matriculación correspondiente"
+            ]
+        },
+        {
+            "tag": "documentos_matriculas",
+            "patterns": [
+                "necesito algun documento para matricularme",
+                "que documentos necesito para matricularme",
+                "es necesaria la documentación para matricularme",
+                "donde encuentro los documentos que solicitan para matricularse",
+                "cuales son los documentos que me piden para matricularme",
+                "es necesario presentar algun documento personal para matricularme",
+                "necesito documentacion personal para matricularme",
+                "que papeles debo subir para matricularme",
+                "documentos requeridos para la matricula",
+                "lista de documentos para matriculacion",
+                "requisitos documentales para matricularse",
+                "documentacion obligatoria para matricula",
+                "que debo tener listo para matricularme",
+                "documentos a presentar en el proceso de matricula",
+                "carga de documentos en SIUG para matricula",
+                "que archivos subir para la matriculacion",
+                "documentos para subir en el sistema de matriculas",
+                "requisitos de documentacion en el sistema SIUG",
+                "proceso de carga de documentos para matricula",
+                "informacion sobre documentos para matricularse"
+            ],
+            "responses": [
+                "Previo al proceso de matriculación los estudiantes deberan subir los documentos solicitados en el sistema SIUG en el apartado de Académico/Estudiante/DATOS PERSONALES. En el apartado de matriculación tambien es posible visualizar los requisitos necesario para continuar el proceso"
+            ]
+        },
+        {
+            "tag": "matriculas_registro_matricula",
+            "patterns": [
+                "como reviso mis ordenes de pago",
+                "como reviso que pagos debo realizar sobre las matriculas",
+                "no se donde revisar mis ordenes de pago",
+                "puedo revisar mis ordenes de pago en el siug",
+                "como se si debo pagar algo de mi matricula",
+                "como se si no tengo que pagar mi matricula",
+                "no se si debo pagar mi matricula",
+                "que valores debo de mi matricula",
+                "debo pagar algo por mi matricula",
+                "como se si he cancelado mi matricula",
+                "como se si no debo ordenes de pago",
+                "como se si se legalizo mi orden de pago",
+                "donde encuentro la informacion de pagos de matricula",
+                "verificar pagos pendientes de matricula",
+                "consulta de pagos para matricula en SIUG",
+                "donde reviso los pagos de mi matricula",
+                "como confirmar pagos realizados de matricula",
+                "gestion de pagos de matricula en SIUG",
+                "verificacion de estado de pagos de matricula",
+                "como chequear mis pagos de matricula en el sistema"
+            ],
+            "responses": [
+                "Los estudiantes matriculados pueden revisar sus respectivos registros de matrículas en el apartado Página principal del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "matriculas_orden_pago",
+            "patterns": [
+                "como reviso mis ordenes de pago",
+                "como reviso que pagos debo realizar sobre las matriculas",
+                "no se donde revisar mis ordenes de pago",
+                "puedo revisar mis ordenes de pago en el siug",
+                "como se si debo pagar algo de mi matricula",
+                "como se si no tengo que pagar mi matricula",
+                "no se si debo pagar mi matricula",
+                "que valores debo de mi matricula",
+                "debo pagar algo por mi matricula",
+                "donde encuentro mis ordenes de pago",
+                "proceso para revisar ordenes de pago en SIUG",
+                "verificar estado de pago de matricula",
+                "consulta de ordenes de pago para matricula",
+                "gestionar mis pagos de matricula en SIUG",
+                "como saber si tengo pagos pendientes de matricula",
+                "donde ver las ordenes de pago de mi matricula",
+                "instrucciones para revisar pagos de matricula",
+                "ubicar ordenes de pago en el sistema SIUG",
+                "como chequear pagos pendientes de mi matricula",
+                "pasos para ver ordenes de pago en SIUG"
+            ],
+            "responses": [
+                "Si el estudiante se encuentra matriculado en el correspondiente proceso academico puede revisar sus ordenes de pago generadas, sean legalizadas o pendientes, en el apartado Académico/Estudiante/ORDEN DE PAGO del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "matriculas_estudiante_matriculado",
+            "patterns": [
+                "como se si estoy matriculado",
+                "termine mi matriculacion pero no se donde revisar mi matricula",
+                "puedo saber si me matricule bien",
+                "como se si estoy matriculado",
+                "no se si me matricule bien",
+                "como puedo revisar si estoy matriculado",
+                "no estoy seguro de si me matricule bien",
+                "puedo revisar si me matricule bien",
+                "donde reviso si mi matricula esta bien",
+                "como confirmar mi matriculacion",
+                "verificar estado de mi matricula",
+                "donde puedo ver mi matricula",
+                "como saber si mi matricula fue exitosa",
+                "consulta de estado de matriculacion",
+                "donde chequear mi matricula en SIUG",
+                "proceso para verificar matriculacion",
+                "como verificar si estoy inscrito en clases",
+                "revisar mi estado de matricula",
+                "donde encuentro mi registro de matricula",
+                "como confirmar que estoy matriculado correctamente"
+            ],
+            "responses": [
+                "Los estudiantes pueden consultar el registro de matrícula y su horario de clases en la Página principal del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "materias_creditos",
+            "patterns": [
+                "donde puedo revisar los creditos de las materias",
+                "como puedo saber cuales son los creditos de una materia",
+                "cuantos creditos tienen las materias en la universidad de guayaquil",
+                "puede ayudarme a verificar los creditos de la materia en la universidad de guayaquil",
+                "informacion sobre creditos de materias",
+                "consulta de creditos por materia",
+                "como encuentro los creditos de las asignaturas",
+                "donde ver los creditos de cada materia",
+                "ubicar creditos de materias en SIUG",
+                "como revisar creditos de asignaturas en la universidad",
+                "proceso para conocer los creditos de una materia",
+                "ver creditos de materias en malla curricular",
+                "donde se encuentran los creditos de las materias",
+                "consulta de creditos en malla curricular",
+                "como saber el numero de creditos de una asignatura",
+                "ubicacion de creditos de materias en el sistema academico",
+                "verificar creditos de materias en la universidad",
+                "acceso a informacion de creditos de materias",
+                "encontrar creditos de asignaturas en SIUG",
+                "consulta de creditos de materias en la universidad"
+            ],
+            "responses": [
+                "Si desea verificar los créditos contemplados para cada materia puede revisar la malla curricular de la carrera correspondiente en el sistema SIUG dirigiéndose al apartado Académico/Estudiante/MALLA CURRICULAR"
+            ]
+        },
+        {
+            "tag": "materias_semestre",
+            "patterns": [
+                "cuales son las materias de primer semestre de software",
+                "que materias se ven en el primer semestre de la materia de ingenieria de Software",
+                "que materias son de primer semestre de ingenieria en software",
+                "donde puedo revisar las materias de ingenieria de software de primer semestre",
+                "materias iniciales en ingenieria de software",
+                "asignaturas del primer semestre en ingenieria de software",
+                "lista de materias de primer semestre en software",
+                "primer semestre de ingenieria de software materias",
+                "que se estudia en el primer semestre de ingenieria de software",
+                "contenido del primer semestre en ingenieria de software",
+                "cursos de inicio en ingenieria de software",
+                "primer ciclo de ingenieria de software asignaturas",
+                "materias para empezar ingenieria de software",
+                "informacion sobre el primer semestre de software",
+                "asignaturas iniciales en la carrera de software",
+                "que cursos tengo en el primer semestre de software",
+                "estructura del primer semestre en ingenieria de software",
+                "detalle de materias del primer semestre en software",
+                "primer periodo de estudios en ingenieria de software",
+                "cursos del inicio de la carrera de ingenieria de software"
+            ],
+            "responses": [
+                "Si desea revisar las materias de la carrera puede acceder al apartado Académico/Estudiante/MALLA CURRICULAR del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "materias_semestre",
+            "patterns": [
+                "cuales son las materias que vere este semestre",
+                "que materias vere este semestre",
+                "donde puedo revisar las materias que vere semestre",
+                "como saber las materias de mi semestre actual",
+                "materias de este semestre en la universidad",
+                "asignaturas para mi semestre actual",
+                "lista de materias de este semestre",
+                "cursos de este semestre en mi carrera",
+                "que cursos tengo este semestre",
+                "informacion sobre materias de este semestre",
+                "ver materias del semestre en curso",
+                "consulta de materias para el semestre actual",
+                "como encuentro las materias de este semestre",
+                "materias que cursaré este semestre",
+                "donde ver las asignaturas de mi semestre",
+                "acceso a las materias de mi semestre en SIUG",
+                "cómo revisar las materias del semestre en la universidad",
+                "verificar materias del semestre en SIUG",
+                "materias para el semestre en curso",
+                "cómo saber qué materias tengo este semestre"
+            ],
+            "responses": [
+                "Si desea revisar las materias que verás durante tu semestre académico, puedes acceder al apartado Académico/Estudiante/MALLA CURRICULAR del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "info_segunda_matricula",
+            "patterns": [
+                "que es una segunda matrícula, a que se refiere el termino segunda matricula",
+                "significado de segunda matricula",
+                "explicacion de lo que es una segunda matricula",
+                "en que consiste la segunda matricula",
+                "definicion de segunda matricula en la universidad",
+                "cuando se dice que es una segunda matricula",
+                "que implica hacer una segunda matricula",
+                "cuando se aplica el termino segunda matricula",
+                "segunda matricula que significa",
+                "concepto de segunda matricula en el ambito academico",
+                "que significa estar en segunda matricula",
+                "razones para una segunda matricula",
+                "cuando se considera una matricula como segunda matricula",
+                "criterios para clasificar una matricula como segunda",
+                "segunda matricula en terminos universitarios que es",
+                "explicar el concepto de segunda matricula",
+                "cuando un estudiante entra en segunda matricula",
+                "situaciones de segunda matricula",
+                "que conlleva una segunda matricula",
+                "definicion academica de segunda matricula"
+            ],
+            "responses": [
+                "Se utiliza el término segunda matrícula cuando un estudiante está recursando una materia por haber reprobado la primera vez que vio el curso"
+            ]
+        }
+    ]
+}

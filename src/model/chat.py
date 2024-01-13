@@ -16,8 +16,8 @@ import unicodedata
 # Ruta de archivos
 words_path = os.path.join('data', 'words.pkl')
 classes_path = os.path.join('data', 'classes.pkl')
-json_path = os.path.join('training_data', 'training.json')
-model_path = os.path.join('models','chat_model.h5')
+json_path = os.path.join('training_data', 'training_joto.json')
+model_path = os.path.join('models','chat_model_val.h5')
 
 lematizer = WordNetLemmatizer()
 intents = json.loads(open(json_path, encoding='utf-8').read())
@@ -46,8 +46,7 @@ def bag_of_words(sentence):
 def predict_class(sentence):
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
-    ERROR_THRESOLD = 0.7
-    print(res)
+    ERROR_THRESOLD = 0.5
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESOLD]
 
     # Verifica si hay alguna predicción con suficiente confianza
@@ -61,10 +60,11 @@ def predict_class(sentence):
         return_list.append({'intent':classes[r[0]], 'probability': str(r[1])})
         print(return_list)
     return return_list
-
+"""
 def get_response(intents_list, training_json):
     tag = intents_list[0]['intent']
     list_of_intents = training_json['intents']
+    result = "No tengo una respuesta para eso."
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
@@ -73,10 +73,20 @@ def get_response(intents_list, training_json):
             result = "No he entendido tu pregunta, sé más específico"
             break
     return result
-
 """
-#para pruebas del modelo--------------------------------
+def get_response(intents_list, training_json):
+    tag = intents_list[0]['intent']
+    list_of_intents = training_json['intents']
+    result = "No tengo una respuesta para eso."  # Valor por defecto
 
+    for i in list_of_intents:
+        if i['tag'] == tag:
+            result = random.choice(i['responses'])
+            break
+    return result
+
+#para pruebas del modelo--------------------------------
+"""
 print("GO Bot is running!") 
 while True:
      message = input("") 
