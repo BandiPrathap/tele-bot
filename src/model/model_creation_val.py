@@ -10,11 +10,12 @@ nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 import unicodedata
 from sklearn.model_selection import StratifiedKFold
+
 # Ruta de archivos
-words_path = os.path.join('words.pkl')
-classes_path = os.path.join('classes.pkl')
-json_path = os.path.join('training_cb.json')
-model_path = os.path.join('chat_model.h5')
+words_path = os.path.join('data','words.pkl')
+classes_path = os.path.join('data','classes.pkl')
+json_path = os.path.join('training_data','training_cb.json')
+model_path = os.path.join('models', 'chat_model_valcross.h5')
 # Inicializando el lematizador
 lemmatizer = WordNetLemmatizer()
 
@@ -143,6 +144,9 @@ for fold_no in range(num_folds):
     print(f'Score for fold {fold_no+1}: {model.metrics_names[0]} of {scores[0]}; {model.metrics_names[1]} of {scores[1]*100}%')
     acc_per_fold.append(scores[1] * 100)
     loss_per_fold.append(scores[0])
+
+
+    model.save('')
 # Mostrar el rendimiento promedio
 print('------------------------------------------------------------------------')
 print('Puntuación por fold')
