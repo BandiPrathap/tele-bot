@@ -1,5 +1,5 @@
 from src.user.user_verification import generate_otp, send_otp_email
-from src.msG.msg import	get_msg
+from src.msg.msg import	get_msg
 from config.database import connect_to_db
 import re
 
