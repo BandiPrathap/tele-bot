@@ -1,59 +1,1542 @@
 {
-    "intents": [
+    "intents":[
         {
             "tag": "saludo",
-            "patterns": ["hola", "que tal", "como estas", "saludos"],
-            "responses": ["Hola", "Buenos dias", "Hola En que puedo ayudarte"]
+            "patterns": [
+                "hola", 
+                "que tal", 
+                "como estas", 
+                "saludos", 
+                "buen dia",
+                "buenas", 
+                "buenas tardes", 
+                "buenas noches", 
+                "que onda", 
+                "como te va", 
+                "como va todo", 
+                "que hay de nuevo", 
+                "hey", 
+                "hola hola", 
+                "que pasa", 
+                "como andas", 
+                "que hay"],
+            "responses": ["¡Hola!", "Buenos días", "Hola, ¿En qué puedo ayudarte?"]
         },
         {
             "tag": "agradecimiento",
-            "patterns": ["gracias", "muchas gracias", "eso es todo gracias", "gracias por la ayuda"],
-            "responses": ["Fue un placer", "Fue un placer ayudarte"]
+            "patterns": [
+                "gracias", 
+                "muchas gracias", 
+                "eso es todo, gracias", 
+                "gracias por la ayuda", 
+                "te agradezco", 
+                "agradecido", 
+                "mil gracias", 
+                "agradezco mucho", 
+                "gracias por todo", 
+                "te lo agradezco", 
+                "agradecido contigo", 
+                "gracias de antemano", 
+                "gracias por tu ayuda", 
+                "gracias por tu tiempo"],
+            "responses": ["Fue un placer", "Fue un placer ayudarte", "De nada"]
         },
         {
             "tag": "despedida",
-            "patterns": ["chao", "adios", "bye", "hasta luego", "hasta pronto"],
-            "responses": ["Adios espero haber sido de utilidad", "Adios hasta la proxima", "Adios estare aqui si tienes otra duda"]
+            "patterns": [
+                "chao", 
+                "adios", 
+                "bye", 
+                "hasta luego", 
+                "hasta pronto", 
+                "nos vemos", 
+                "hasta la proxima", 
+                "cuidate", 
+                "hasta otra", 
+                "hasta entonces", 
+                "nos hablamos", 
+                "hasta mañana", 
+                "que estes bien", 
+                "me despido", 
+                "me voy"],
+            "responses": ["Adiós, espero haber sido de utilidad", "Adiós, hasta la próxima", "Adiós, estaré aquí si tienes otra duda"]
         },
         {
-            "tag": "consulta_general",
-            "patterns": ["que puedes hacer", "explicame tus funciones", "cuentame mas sobre ti"],
-            "responses": ["Soy un chatbot disenado para ayudarte Puedo responder preguntas proporcionar informacion y mas"]
+            "tag": "ingles_ubicacion_info_inscrip",
+            "patterns": [
+                "hasta cuando puedo dar el examen de ubicacion",
+                "como puedo inscribirme en el examen de ubicacion",
+                "cuando son las inscripciones del examen de ubicacion",
+                "fecha limite para examen de ubicacion",
+                "proceso de inscripcion para el examen de ubicacion",
+                "plazo para inscribirse en examen de ubicacion",
+                "informacion sobre examen de ubicacion",
+                "detalles de la inscripcion del examen de ubicacion de ingles",
+                "cuando puedo rendir el examen de ubicacion",
+                "fechas para el examen de ubicacion",
+                "como registrarse para el examen de ubicacion",
+                "periodo de inscripcion para examen de ubicacion",
+                "cuando se cierran las inscripciones para el examen de ubicacion",
+                "instrucciones para inscripcion en examen de ubicacion",
+                "informacion para inscribirse en examen de ubicacion"
+            ],
+            "responses": [
+                "La inscripción para el examen de ubicación se realiza mediante la plataforma SIUG en las fechas publicadas en las paginas oficiales segun cada periodo académico."
+            ]
         },
         {
-            "tag": "ayuda",
-            "patterns": ["necesito ayuda", "puedes ayudarme", "no entiendo", "que hago"],
-            "responses": ["Claro estare encantado de ayudarte Por favor dime cual es tu pregunta o problema"]
+            "tag": "ingles_ubicacion_info_que_es",
+            "patterns": [
+                "que es el examen de ubicacion",
+                "para que sirve el examen de ubicacion",
+                "como saber si puedo dar el examen de ubicacion",
+                "detalle del examen de ubicacion",
+                "cual es el proposito del examen de ubicacion",
+                "en que consiste el examen de ubicacion",
+                "que evalua el examen de ubicacion",
+                "por que deberia tomar el examen de ubicacion",
+                "beneficios de dar el examen de ubicacion",
+                "es necesario dar el examen de ubicacion",
+                "quien puede rendir el examen de ubicacion",
+                "requisitos para el examen de ubicacion",
+                "que se hace en el examen de ubicacion",
+                "cual es la importancia del examen de ubicacion"
+            ],
+            "responses": [
+                "El examen de ubicación puede ser dado por cualquier estudiante dentro del primer año de estudios con el fin de evaluar sus conocimientos y ser asignado al adecuado dentro del programa modular"
+            ]
         },
         {
-            "tag": "agradecimiento_adicional",
-            "patterns": ["gracias por tu ayuda", "excelente servicio", "te estoy agradecido", "gracias por ser tan util"],
-            "responses": ["De nada", "Es un placer ayudar Hay algo mas en lo que pueda asistirte"]
+            "tag": "ingles_validacion_info_inscrip",
+            "patterns": [
+                "hasta cuando puedo dar el examen de validacion",
+                "como puedo inscribirme en el examen de validacion",
+                "cuando son las inscripciones del examen de validacion",
+                "fecha limite para examen de validacion",
+                "proceso de inscripcion para el examen de validacion",
+                "plazo para inscribirse en examen de validacion",
+                "informacion sobre examen de validacion",
+                "detalles del examen de validacion de ingles",
+                "cuando puedo rendir el examen de validacion de ingles",
+                "fechas para el examen de validacion de ingles",
+                "como registrarse para el examen de validacion de ingles",
+                "periodo de inscripcion para examen de validacion",
+                "cuando se cierran las inscripciones para el examen de validacion",
+                "instrucciones para inscripcion en examen de validacion",
+                "informacion para inscribirse en examen de validacion",
+                "requisitos para el examen de validacion",
+                "donde inscribirse para el examen de validacion",
+                "procedimiento para inscripcion en examen de validacion",
+                "fechas de inscripcion para el examen de validacion",
+                "plazos de inscripcion para el examen de validacion"
+            ],
+            "responses": [
+                "La inscripción para el examen de validación se realiza mediante la plataforma SIUG en las fechas publicadas en las paginas oficiales segun cada periodo académico."
+            ]
         },
         {
-            "tag": "informacion",
-            "patterns": ["cuentame mas", "dime mas informacion", "explicame"],
-            "responses": ["Soy un chatbot inteligente creado para proporcionar asistencia y responder preguntas En que puedo ayudarte hoy"]
+            "tag": "ingles_validacion_info_que_es",
+            "patterns": [
+                "que es el examen de validacion",
+                "para que sirve el examen de validacion",
+                "como saber si puedo dar el examen de validacion",
+                "que es el examen de validacion de ingles",
+                "para que sirve el examen de validacion de ingles",
+                "informacion sobre el examen de validacion",
+                "detalle del examen de validacion",
+                "cual es el proposito del examen de validacion",
+                "en que consiste el examen de validacion",
+                "que evalua el examen de validacion",
+                "por que deberia tomar el examen de validacion",
+                "beneficios de dar el examen de validacion",
+                "es necesario dar el examen de validacion",
+                "quien puede rendir el examen de validacion",
+                "requisitos para el examen de validacion",
+                "que se hace en el examen de validacion",
+                "cual es la importancia del examen de validacion",
+                "como me preparo para el examen de validacion",
+                "que temas cubre el examen de validacion",
+                "cuales son los criterios del examen de validacion"
+            ],
+            "responses": [
+                "El examen de validación puede ser dado por cualquier estudiante de acuerdo a los periodos académicos con el fin de evaluar sus conocimientos del módulo de ingles correspondiente y aprovar el módulo mediante el proceso. Solo se puede realizar un examén por periodo lectivo y en caso de fallar deberá registrarce como segunda matrícula."
+            ]
         },
         {
-            "tag": "despedida_amigable",
-            "patterns": ["hasta luego amigo", "nos vemos", "hasta la proxima", "adios amigo"],
-            "responses": ["Hasta luego que tengas un excelente dia", "Nos vemos Siempre estoy aqui si necesitas algo"]
+            "tag": "postgrado_gratuidad",
+            "patterns": [
+                "aplica la gratuidad a materias de postgrado",
+                "el proceso de postgrado tiene gratuidad",
+                "que pagos deben hacerce para materias de postgrado",
+                "que valores corresponden al proceso de postgrado",
+                "los cursos de postgrado son gratuitos",
+                "hay gratuidad en los programas de postgrado",
+                "costo de estudios de postgrado",
+                "financiamiento para postgrado",
+                "se paga por cursar un postgrado",
+                "existe algun beneficio de gratuidad en postgrado",
+                "tarifas de matricula para postgrado",
+                "costos asociados a postgrado",
+                "postgrado es gratuito o pagado",
+                "como se financia un postgrado",
+                "hay que pagar por los estudios de postgrado",
+                "cuanto cuesta un programa de postgrado",
+                "postgrado tiene algun costo",
+                "aranceles de postgrado",
+                "precio de los cursos de postgrado",
+                "es gratis estudiar un postgrado"
+            ],
+            "responses": [
+                "La gratuidad de los procesos solo se refieren a los niveles de educación inicial, básica, bachillerato y pregrado, para los estudios de postgrado se debe pagar obligatoriamente los valores de matrícula y aranceles establecidos para cada programa"
+            ]
         },
         {
-            "tag": "solicitud_informacion",
-            "patterns": ["necesito informacion sobre", "donde puedo encontrar informacion sobre", "hablame acerca de"],
-            "responses": ["Puedo proporcionarte informacion sobre eso En que especificamente estas interesado"]
+            "tag": "pregrado_gratuidad",
+            "patterns": [
+                "las materias de la universidad tienen valor alguno",
+                "que cubre la gratuidad de la universidad de guayaquil",
+                "como puedo saber si aplico para la gratuidad",
+                "si me matriculo por primera vez debo pagar las materias",
+                "debo pagar por las materias de la universidad de guayaquil",
+                "cuanto es el costo de las materias de la universidad de guayaquil",
+                "la universidad de guayaquil ofrece gratuidad en sus cursos",
+                "todos los cursos de pregrado son gratuitos en la universidad de guayaquil",
+                "hay costos ocultos en la gratuidad de la universidad",
+                "como funciona la gratuidad en la universidad de guayaquil",
+                "requisitos para acceder a la gratuidad en la universidad",
+                "la gratuidad aplica para todas las materias",
+                "beneficios de la gratuidad en la universidad de guayaquil",
+                "gratuidad para estudiantes de primer ingreso",
+                "condiciones de la gratuidad en la universidad de guayaquil",
+                "la gratuidad cubre todos los gastos en la universidad",
+                "cual es el alcance de la gratuidad en la universidad",
+                "gratuidad para estudiantes regulares en la universidad de guayaquil",
+                "excepciones en la política de gratuidad de la universidad de guayaquil"
+            ],
+            "responses": [
+                "La gratuidad de la educación superior beneficia a todos los estudiantes que cursan por primera vez el programa de nivelación, estudiantes regulares que cursan por primera vez una materia, estudiantes que cambian por primera vez de carrera con materias aprovadas homologadas."
+            ]
         },
         {
-            "tag": "agradecimiento_personalizado",
-            "patterns": ["gracias por tu atencion", "te agradezco personalmente", "excelente servicio personalizado"],
-            "responses": ["Estoy aqui para ayudar Si tienes mas preguntas no dudes en preguntar"]
+            "tag": "pregrado_gratuidad_perdida",
+            "patterns": [
+                "como se si perdi la gratuidad de las materias",
+                "cuando no es aplicable la gratuidad",
+                "es posible perder la gratuidad",
+                "creo que perdi la gratuidad",
+                "cuanto debo pagar por materia perdida",
+                "bajo que condiciones se pierde la gratuidad",
+                "perdi alguna materia, aun tengo gratuidad",
+                "criterios para perder la gratuidad en la universidad",
+                "la gratuidad se mantiene si repruebo una materia",
+                "que pasa con la gratuidad si cambio de carrera",
+                "consecuencias de no cumplir con el plan de estudios para la gratuidad",
+                "la gratuidad se pierde en segundas matriculas",
+                "situaciones en las que se pierde la gratuidad universitaria",
+                "como afecta una baja academica a la gratuidad",
+                "puedo recuperar la gratuidad si la pierdo",
+                "costos por perder la gratuidad en la universidad",
+                "limitaciones de la gratuidad en la educación superior"
+            ],
+            "responses": [
+                "La gratuidad de la educación superior se pierde en caso de perdida de materias por la falta de horas del plan de estudio, la gratuidad no es aplicable para segundas y terceras matriculas, matriculas extraordinarias o especiales salvo casos de fuerza mayor. En caso de perdida de gratuidad el alumno debera cancelar los valores dados según las tablas de reglamento. Estos valores se pueden consultar desde el Sistema Integrado de la Universidad de Guayaquil (SIUG)"
+            ]
         },
         {
-            "tag": "curiosidad",
-            "patterns": ["tengo curiosidad", "cuentame algo interesante", "dime un dato curioso"],
-            "responses": ["Claro Sabias que", "Aqui tienes un dato interesante", "La curiosidad es genial Sabias que"]
+            "tag": "valores_pagar_primera_matricula",
+            "patterns": [
+                "si pierdo la gratuidad y me matriculo por primera vez cuanto debo pagar",
+                "cuanto cuesta la primera matricula de una materia",
+                "cuanto se debe pagar por primera matricula",
+                "cual es el precio de la primera matricula de una materia",
+                "cuanto debo pagar por materia si es la primera vez que me matriculo",
+                "costo de la primera matricula sin gratuidad",
+                "tarifa de matricula para estudiantes sin gratuidad",
+                "precio por credito en la primera matricula",
+                "valor de matricula para estudiantes que perdieron la gratuidad",
+                "coste de inscripcion inicial sin gratuidad",
+                "tarifas de matricula para nueva inscripcion",
+                "precio de matricula para primera vez sin gratuidad",
+                "costos de matriculacion inicial en la universidad",
+                "cuanto se paga en la primera matricula tras perder gratuidad",
+                "valor por credito en primera matricula sin gratuidad",
+                "gastos de primera matricula en universidad publica",
+                "costo de matricula en universidad privada sin gratuidad",
+                "precio de inscripcion por primera vez en universidad",
+                "tarifas aplicables a primera matricula sin beneficio de gratuidad",
+                "cuanto cuesta inscribirse por primera vez sin gratuidad"
+            ],
+            "responses": [
+                "En caso de perdida de gratuidad la primera matrícula se paga de acuerdo a: para instituciones publicas $2.02 por crédito, para instituciones privadas $2.83 por crédito, para segunda carrera $6.06 por crédito. Tomar en consideración que para conocer el valor final deberá multiplicar el valor por crédito según el caso, por el número de créditos de las materias a matricularse."
+            ]
+        },
+        {
+            "tag": "valores_pagar_segunda_matricula",
+            "patterns": [
+                "si pierdo la gratuidad y me matriculo por segunda vez cuanto debo pagar",
+                "cuanto cuesta la segunda matricula de una materia",
+                "cuanto se debe pagar por segunda matricula",
+                "cual es el precio de la segunda matricula de una materia",
+                "cuanto debo pagar por materia si es la segunda vez que me matriculo",
+                "costo de la segunda matricula sin gratuidad",
+                "tarifa de matricula para estudiantes en segunda inscripcion",
+                "precio por credito en la segunda matricula",
+                "valor de matricula para segunda inscripcion sin gratuidad",
+                "coste de reinscripcion sin gratuidad",
+                "tarifas de matricula para segunda inscripcion",
+                "precio de matricula para segunda vez sin gratuidad",
+                "costos de matriculacion en segunda inscripcion en la universidad",
+                "cuanto se paga en la segunda matricula tras perder gratuidad",
+                "valor por credito en segunda matricula sin gratuidad",
+                "gastos de segunda matricula en universidad publica",
+                "costo de matricula en universidad privada en segunda inscripcion",
+                "precio de reinscripcion en universidad",
+                "tarifas aplicables a segunda matricula sin beneficio de gratuidad",
+                "cuanto cuesta reinscribirse sin gratuidad"
+            ],
+            "responses": [
+                "En caso de perdida de gratuidad la segunda matrícula se paga de acuerdo a: para instituciones publicas $3.44 por crédito, para instituciones privadas $4.24 por crédito, para segunda carrera $7.48 por crédito. Para conocer el valor final deberá multiplicar el valor por crédito según el caso, por el número de créditos de las materias a matricularse."
+            ]
+        },
+        {
+            "tag": "valores_pagar_tercera_matricula",
+            "patterns": [
+                "cuanto cuesta la tercera matricula de una materia",
+                "cuanto se debe pagar por tercera matricula",
+                "cual es el precio de la tercera matricula de una materia",
+                "cuanto debo pagar por materia si es la tercera vez que me matriculo",
+                "costo de la tercera matricula sin gratuidad",
+                "tarifa de matricula para estudiantes en tercera inscripcion",
+                "precio por credito en la tercera matricula",
+                "valor de matricula para tercera inscripcion sin gratuidad",
+                "coste de tercera inscripcion sin gratuidad",
+                "tarifas de matricula para tercera inscripcion",
+                "precio de matricula para tercera vez sin gratuidad",
+                "costos de matriculacion en tercera inscripcion en la universidad",
+                "cuanto se paga en la tercera matricula tras perder gratuidad",
+                "valor por credito en tercera matricula sin gratuidad",
+                "gastos de tercera matricula en universidad publica",
+                "costo de matricula en universidad privada en tercera inscripcion",
+                "precio de tercera inscripcion en universidad",
+                "tarifas aplicables a tercera matricula sin beneficio de gratuidad",
+                "cuanto cuesta reinscribirse por tercera vez sin gratuidad",
+                "costo por crédito en tercera matrícula para estudiantes sin gratuidad"
+            ],
+            "responses": [
+                "En caso de perdida de gratuidad la tercera matrícula se paga de acuerdo a: para instituciones publica $4.85 por crédito, para instituciones privadas $5.66 por crédito, para segunda carrera $9.10 por crédito. Para conocer el valor final debera multiplicar el valor por crédito según el caso, por el número de créditos de las materias a matricularse."
+            ]
+        },
+        {
+            "tag": "bot_info",
+            "patterns": [
+                "que eres",
+                "de donde eres",
+                "porque te usan",
+                "cual es tu finalidad",
+                "cual es tu fin",
+                "me puedes ayudar",
+                "cual es tu proposito",
+                "para que fuiste creado",
+                "que haces",
+                "cual es tu objetivo",
+                "cual es tu rol",
+                "que servicio ofreces",
+                "eres un programa",
+                "eres una inteligencia artificial",
+                "cual es tu funcion",
+                "a que te dedicas",
+                "que tipo de bot eres",
+                "eres un asistente virtual",
+                "para que sirves",
+                "como puedes asistirme"
+            ],
+            "responses": [
+                "Soy el ChatBot de la Universidad de Guayaquil cuya finalidad es ayudar a los alumnos de la Facultad de Ciencias Matemáticas y Físicas"
+            ]
+        },
+        {
+            "tag": "bot_funcionalidad",
+            "patterns": [
+                "para que sirves",
+                "en que me puedes ayudar",
+                "que informacion proporcionas",
+                "sobre que puedo preguntar",
+                "que informacion puedo solicitar",
+                "que tipo de dudas resuelves",
+                "que tipo de consultas resuelves",
+                "cual es tu utilidad",
+                "que ayuda ofreces a los estudiantes",
+                "puedes darme informacion sobre matriculas",
+                "ofreces informacion sobre aranceles",
+                "como me puedes asistir en la carrera de software",
+                "eres util para los estudiantes de software",
+                "puedes resolver preguntas sobre la universidad",
+                "tienes informacion especifica de la carrera de software",
+                "puedes ayudarme con dudas de matriculas",
+                "que servicios ofreces a los estudiantes de software",
+                "eres un asistente para consultas académicas",
+                "puedo preguntarte sobre costos universitarios",
+                "tienes informacion sobre el proceso de matriculacion"
+            ],
+            "responses": [
+                "Proporciono información sobre matriculas y aranceles a los estudiantes de la Carrera de Software"
+            ]
+        },
+        {
+            "tag": "matriculas_proceso",
+            "patterns": [
+                "donde puedo matricularme",
+                "desde que pagina puedo matricularme",
+                "la universidad cuenta con pagina para matricularse",
+                "como se lleva a cabo el proceso de matricula",
+                "desde donde puedo matricularme",
+                "donde puedo revisar el lugar para matricularme",
+                "necesito matricularme pero no se donde",
+                "hay pagina para matricularse",
+                "debo acercarme a la universidad para matricularme",
+                "no se desde donde debo matricularme",
+                "cual es el procedimiento para matricularme",
+                "instrucciones para la matriculacion",
+                "como me registro para las clases",
+                "donde encuentro el formulario de matricula",
+                "proceso de matriculacion en linea",
+                "como accedo al sistema SIUG para matricularme",
+                "pasos para matricularse en la universidad",
+                "guia para la matriculacion universitaria",
+                "procedimiento online para matricularse",
+                "como realizar la matricula a traves de SIUG"
+            ],
+            "responses": [
+                "Los estudiantes deberan registrarse en el sistema SIUG de la Universidad de Guayaquil siguiendo los pasos compartidos en las fuentes oficiales a fin de poder realizar los procesos de matriculación correspondiente"
+            ]
+        },
+        {
+            "tag": "documentos_matriculas",
+            "patterns": [
+                "necesito algun documento para matricularme",
+                "que documentos necesito para matricularme",
+                "es necesaria la documentación para matricularme",
+                "donde encuentro los documentos que solicitan para matricularse",
+                "cuales son los documentos que me piden para matricularme",
+                "es necesario presentar algun documento personal para matricularme",
+                "necesito documentacion personal para matricularme",
+                "que papeles debo subir para matricularme",
+                "documentos requeridos para la matricula",
+                "lista de documentos para matriculacion",
+                "requisitos documentales para matricularse",
+                "documentacion obligatoria para matricula",
+                "que debo tener listo para matricularme",
+                "documentos a presentar en el proceso de matricula",
+                "carga de documentos en SIUG para matricula",
+                "que archivos subir para la matriculacion",
+                "documentos para subir en el sistema de matriculas",
+                "requisitos de documentacion en el sistema SIUG",
+                "proceso de carga de documentos para matricula",
+                "informacion sobre documentos para matricularse"
+            ],
+            "responses": [
+                "Previo al proceso de matriculación los estudiantes deberan subir los documentos solicitados en el sistema SIUG en el apartado de Académico/Estudiante/DATOS PERSONALES. En el apartado de matriculación tambien es posible visualizar los requisitos necesario para continuar el proceso"
+            ]
+        },
+        {
+            "tag": "matriculas_registro_matricula",
+            "patterns": [
+                "como reviso mis ordenes de pago",
+                "como reviso que pagos debo realizar sobre las matriculas",
+                "no se donde revisar mis ordenes de pago",
+                "puedo revisar mis ordenes de pago en el siug",
+                "como se si debo pagar algo de mi matricula",
+                "como se si no tengo que pagar mi matricula",
+                "no se si debo pagar mi matricula",
+                "que valores debo de mi matricula",
+                "debo pagar algo por mi matricula",
+                "como se si he cancelado mi matricula",
+                "como se si no debo ordenes de pago",
+                "como se si se legalizo mi orden de pago",
+                "donde encuentro la informacion de pagos de matricula",
+                "verificar pagos pendientes de matricula",
+                "consulta de pagos para matricula en SIUG",
+                "donde reviso los pagos de mi matricula",
+                "como confirmar pagos realizados de matricula",
+                "gestion de pagos de matricula en SIUG",
+                "verificacion de estado de pagos de matricula",
+                "como chequear mis pagos de matricula en el sistema"
+            ],
+            "responses": [
+                "Los estudiantes matriculados pueden revisar sus respectivos registros de matrículas en el apartado Página principal del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "matriculas_orden_pago",
+            "patterns": [
+                "como reviso mis ordenes de pago",
+                "como reviso que pagos debo realizar sobre las matriculas",
+                "no se donde revisar mis ordenes de pago",
+                "puedo revisar mis ordenes de pago en el siug",
+                "como se si debo pagar algo de mi matricula",
+                "como se si no tengo que pagar mi matricula",
+                "no se si debo pagar mi matricula",
+                "que valores debo de mi matricula",
+                "debo pagar algo por mi matricula",
+                "donde encuentro mis ordenes de pago",
+                "proceso para revisar ordenes de pago en SIUG",
+                "verificar estado de pago de matricula",
+                "consulta de ordenes de pago para matricula",
+                "gestionar mis pagos de matricula en SIUG",
+                "como saber si tengo pagos pendientes de matricula",
+                "donde ver las ordenes de pago de mi matricula",
+                "instrucciones para revisar pagos de matricula",
+                "ubicar ordenes de pago en el sistema SIUG",
+                "como chequear pagos pendientes de mi matricula",
+                "pasos para ver ordenes de pago en SIUG"
+            ],
+            "responses": [
+                "Si el estudiante se encuentra matriculado en el correspondiente proceso academico puede revisar sus ordenes de pago generadas, sean legalizadas o pendientes, en el apartado Académico/Estudiante/ORDEN DE PAGO del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "matriculas_estudiante_matriculado",
+            "patterns": [
+                "como se si estoy matriculado",
+                "termine mi matriculacion pero no se donde revisar mi matricula",
+                "puedo saber si me matricule bien",
+                "como se si estoy matriculado",
+                "no se si me matricule bien",
+                "como puedo revisar si estoy matriculado",
+                "no estoy seguro de si me matricule bien",
+                "puedo revisar si me matricule bien",
+                "donde reviso si mi matricula esta bien",
+                "como confirmar mi matriculacion",
+                "verificar estado de mi matricula",
+                "donde puedo ver mi matricula",
+                "como saber si mi matricula fue exitosa",
+                "consulta de estado de matriculacion",
+                "donde chequear mi matricula en SIUG",
+                "proceso para verificar matriculacion",
+                "como verificar si estoy inscrito en clases",
+                "revisar mi estado de matricula",
+                "donde encuentro mi registro de matricula",
+                "como confirmar que estoy matriculado correctamente"
+            ],
+            "responses": [
+                "Los estudiantes pueden consultar el registro de matrícula y su horario de clases en la Página principal del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "materias_creditos",
+            "patterns": [
+                "donde puedo revisar los creditos de las materias",
+                "como puedo saber cuales son los creditos de una materia",
+                "cuantos creditos tienen las materias en la universidad de guayaquil",
+                "puede ayudarme a verificar los creditos de la materia en la universidad de guayaquil",
+                "informacion sobre creditos de materias",
+                "consulta de creditos por materia",
+                "como encuentro los creditos de las asignaturas",
+                "donde ver los creditos de cada materia",
+                "ubicar creditos de materias en SIUG",
+                "como revisar creditos de asignaturas en la universidad",
+                "proceso para conocer los creditos de una materia",
+                "ver creditos de materias en malla curricular",
+                "donde se encuentran los creditos de las materias",
+                "consulta de creditos en malla curricular",
+                "como saber el numero de creditos de una asignatura",
+                "ubicacion de creditos de materias en el sistema academico",
+                "verificar creditos de materias en la universidad",
+                "acceso a informacion de creditos de materias",
+                "encontrar creditos de asignaturas en SIUG",
+                "consulta de creditos de materias en la universidad"
+            ],
+            "responses": [
+                "Si desea verificar los créditos contemplados para cada materia puede revisar la malla curricular de la carrera correspondiente en el sistema SIUG dirigiéndose al apartado Académico/Estudiante/MALLA CURRICULAR"
+            ]
+        },
+        {
+            "tag": "materias_semestre",
+            "patterns": [
+                "cuales son las materias de primer semestre de software",
+                "que materias se ven en el primer semestre de la materia de ingenieria de Software",
+                "que materias son de primer semestre de ingenieria en software",
+                "donde puedo revisar las materias de ingenieria de software de primer semestre",
+                "materias iniciales en ingenieria de software",
+                "asignaturas del primer semestre en ingenieria de software",
+                "lista de materias de primer semestre en software",
+                "primer semestre de ingenieria de software materias",
+                "que se estudia en el primer semestre de ingenieria de software",
+                "contenido del primer semestre en ingenieria de software",
+                "cursos de inicio en ingenieria de software",
+                "primer ciclo de ingenieria de software asignaturas",
+                "materias para empezar ingenieria de software",
+                "informacion sobre el primer semestre de software",
+                "asignaturas iniciales en la carrera de software",
+                "que cursos tengo en el primer semestre de software",
+                "estructura del primer semestre en ingenieria de software",
+                "detalle de materias del primer semestre en software",
+                "primer periodo de estudios en ingenieria de software",
+                "cursos del inicio de la carrera de ingenieria de software"
+            ],
+            "responses": [
+                "Si desea revisar las materias de la carrera puede acceder al apartado Académico/Estudiante/MALLA CURRICULAR del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "materias_semestre",
+            "patterns": [
+                "cuales son las materias que vere este semestre",
+                "que materias vere este semestre",
+                "donde puedo revisar las materias que vere semestre",
+                "como saber las materias de mi semestre actual",
+                "materias de este semestre en la universidad",
+                "asignaturas para mi semestre actual",
+                "lista de materias de este semestre",
+                "cursos de este semestre en mi carrera",
+                "que cursos tengo este semestre",
+                "informacion sobre materias de este semestre",
+                "ver materias del semestre en curso",
+                "consulta de materias para el semestre actual",
+                "como encuentro las materias de este semestre",
+                "materias que cursaré este semestre",
+                "donde ver las asignaturas de mi semestre",
+                "acceso a las materias de mi semestre en SIUG",
+                "cómo revisar las materias del semestre en la universidad",
+                "verificar materias del semestre en SIUG",
+                "materias para el semestre en curso",
+                "cómo saber qué materias tengo este semestre"
+            ],
+            "responses": [
+                "Si desea revisar las materias que verás durante tu semestre académico, puedes acceder al apartado Académico/Estudiante/MALLA CURRICULAR del sistema SIUG"
+            ]
+        },
+        {
+            "tag": "info_segunda_matricula",
+            "patterns": [
+                "que es una segunda matrícula, a que se refiere el termino segunda matricula",
+                "significado de segunda matricula",
+                "explicacion de lo que es una segunda matricula",
+                "en que consiste la segunda matricula",
+                "definicion de segunda matricula en la universidad",
+                "cuando se dice que es una segunda matricula",
+                "que implica hacer una segunda matricula",
+                "cuando se aplica el termino segunda matricula",
+                "segunda matricula que significa",
+                "concepto de segunda matricula en el ambito academico",
+                "que significa estar en segunda matricula",
+                "razones para una segunda matricula",
+                "cuando se considera una matricula como segunda matricula",
+                "criterios para clasificar una matricula como segunda",
+                "segunda matricula en terminos universitarios que es",
+                "explicar el concepto de segunda matricula",
+                "cuando un estudiante entra en segunda matricula",
+                "situaciones de segunda matricula",
+                "que conlleva una segunda matricula",
+                "definicion academica de segunda matricula"
+            ],
+            "responses": [
+                "Se utiliza el término segunda matrícula cuando un estudiante está recursando una materia por haber reprobado la primera vez que vio el curso"
+            ]
+        },
+        {
+            "tag": "definicion_creditos_academicos",
+            "patterns": [
+                "que son los creditos",
+                "a que se refiere el termino credito academico",
+                "que quiere decir credito",
+                "que es un credito",
+                "explicacion de credito academico",
+                "significado de credito en educacion",
+                "definicion de credito academico",
+                "como se define un credito academico",
+                "cual es el significado de credito en la universidad",
+                "concepto de credito en el ambito academico",
+                "que comprende un credito academico",
+                "cuanto dura un credito academico",
+                "que representa un credito en la educacion superior",
+                "cual es la medida de un credito academico",
+                "en que consiste un credito universitario",
+                "cuantas horas son un credito academico",
+                "explicar que es un credito en la universidad",
+                "cual es el valor de un credito academico",
+                "que implica un credito en terminos academicos",
+                "definicion detallada de credito academico"
+            ],
+            "responses": [
+                "Un crédito académico es la unidad que mide el tiempo destinado para actividad académica del estudiante, en función de las competencias profesionales y resultados esperados en los distintos niveles y modalidades de estudios escogida. Un crédito académico equivale a cuarenta y ocho (48) horas de actividad del estudiante en las distintas actividades de aprendizaje previstas en el plan de estudios."
+            ]
+        },
+        {
+            "tag": "definicion_periodo_academico",
+            "patterns": [
+                "que es un periodo académico",
+                "que significa periodo academico",
+                "definicion de periodo academico",
+                "explicacion de un periodo academico",
+                "significado de periodo academico en la universidad",
+                "concepto de periodo academico",
+                "en que consiste un periodo academico",
+                "cuales son los periodos academicos",
+                "periodo academico que es",
+                "como se define un periodo academico",
+                "periodo academico en educacion superior que significa",
+                "caracteristicas de un periodo academico",
+                "tipos de periodos academicos en la universidad",
+                "periodo academico universitario explicacion",
+                "que comprende un periodo academico",
+                "estructura de un periodo academico",
+                "periodo academico en la universidad que implica",
+                "duracion de un periodo academico",
+                "periodos academicos ordinario y extraordinario que son",
+                "definicion detallada de periodo academico"
+            ],
+            "responses": [
+                "Los periodos académicos son los tiempos equivalentes en meses, en los que se puede cursar asignaturas dependiendo del periodo académico, este caso la Universidad de Guayaquil implementa dos periodos académicos que son ordinario y extraordinario."
+            ]
+        },
+        {
+            "tag": "definicion_periodo_academico_ordinario",
+            "patterns": [
+                "que es un periodo academico ordinario",
+                "explicacion de periodo academico ordinario",
+                "definicion de periodo academico ordinario",
+                "que significa periodo academico ordinario",
+                "informacion sobre el periodo academico ordinario",
+                "que comprende un periodo academico ordinario",
+                "en que consiste el periodo academico ordinario",
+                "detalles del periodo academico ordinario",
+                "caracteristicas del periodo academico ordinario",
+                "explicar que es un periodo academico ordinario",
+                "concepto de periodo academico ordinario",
+                "que es la matricula en periodo academico ordinario",
+                "periodo academico ordinario que implica",
+                "cual es la duracion de un periodo academico ordinario",
+                "horas de un periodo academico ordinario",
+                "que es pao en terminos academicos",
+                "significado de periodo academico ordinario en la universidad",
+                "cuantas horas tiene un periodo academico ordinario",
+                "descripcion de un periodo academico ordinario",
+                "periodo academico ordinario en la universidad que es"
+            ],
+            "responses": [
+                "El periodo académico ordinario o también llamado PAO se refiere a aquella matrícula que se realiza en el plazo establecido por la universidad para el proceso de matriculación. Normalmente un período académico ordinario equivale a setecientas veinte (720) horas; en consecuencia, los dos períodos académicos ordinarios previstos a lo largo del año equivalen a mil cuatrocientas cuarenta (1.440) horas."
+            ]
+        },
+        {
+            "tag": "definicion_periodo_academico_extraordinario",
+            "patterns": [
+                "que es un periodo academico extraordinario",
+                "que significa PAE",
+                "periodo academico extraordinario definicion",
+                "Explicame el periodo academico extraordinario",
+                "Dime sobre el periodo academico extraordinario",
+                "Háblame del periodo academico extraordinario",
+                "periodo academico extraordinario en universidad",
+                "periodo academico extraordinario para estudiantes de mallas anuales",
+                "Matrícula en periodo academico extraordinario",
+                "Como funciona el periodo academico extraordinario",
+                "Cuando se aplica el periodo academico extraordinario",
+                "Quienes pueden matricularse en el periodo academico extraordinario",
+                "periodo academico extraordinario para estudiantes con materias pendientes",
+                "periodo academico extraordinario para terminar la malla curricular",
+                "Que es un PAE en la universidad",
+                "periodo academico extraordinario y estudiantes no vigentes",
+                "periodo academico extraordinario y registro de títulos"
+            ],
+            "responses": [
+                "El periodo académico extraordinario, o también llamado PAE, es aquella matrícula que se realiza según los mecanismos y plazos establecidos por la universidad. Está dirigida a estudiantes de mallas anuales principalmente, que se encuentran en el estado de 'No vigentes habilitadas para el registro de títulos', como vía de evacuación para aquellos estudiantes a los cuales solo les faltaba una o dos materias para poder terminar su malla curricular."
+            ]
+        },
+        {
+            "tag": "definicion_matricula_especial",
+            "patterns": [
+                "que es una matricula especial",
+                "matricula especial definicion",
+                "Explicame la matricula especial",
+                "Dime sobre la matricula especial",
+                "Háblame de la matricula especial",
+                "Matricula especial en la universidad",
+                "Matricula especial por circunstancias excepcionales",
+                "Matricula especial por caso fortuito",
+                "Matricula especial por fuerza mayor",
+                "Cuando se otorga la matricula especial",
+                "Quienes pueden solicitar matricula especial",
+                "Requisitos para matricula especial",
+                "Documentación para matricula especial",
+                "Consejo Superior Universitario y matricula especial"
+            ],
+            "responses": ["La matrícula especial es aquella que, en casos individuales y excepcionales, otorga el Consejo Superior Universitario para quienes, por circunstancias de caso fortuito o fuerza mayor debidamente justificadas y documentadas, no se hayan matriculado de manera ordinaria o extraordinaria."]
+        },
+        {
+            "tag": "anulacion_matricula",
+            "patterns": [
+                "cuando la universidad puede anular una matricula",
+                "en que casos se anula una matricula universitaria",
+                "bajo que condiciones se declara nula una matricula",
+                "motivos para anulacion de matricula en la universidad",
+                "cuales son las razones para anular una matricula universitaria",
+                "situaciones en las que se puede anular una matricula",
+                "cuando se declara nula una matricula en la universidad",
+                "causas de anulacion de matricula en la universidad"
+            ],
+            "responses": [
+                "El Consejo Superior Universitario de oficio, o a petición de parte, podrá declarar nula una matrícula, cuando ésta haya sido realizada violando la Ley y la normativa pertinente, previo informe de la autoridad competente, que contendrá las formalidades legales y reglamentarias aplicables en cada caso, previniendo que no se afecte el derecho al debido proceso; esto sin perjuicio de las demás acciones legales que deban adoptarse, en caso de existir méritos para ello."
+            ]
+        },
+        {
+            "tag": "retiro_voluntario_materia",
+            "patterns": [
+                "como se puede hacer el retiro voluntario de una materia",
+                "proceso para retirarse voluntariamente de una asignatura",
+                "pasos para el retiro voluntario de cursos en la universidad",
+                "manera de retirarse de una materia voluntariamente",
+                "instrucciones para el retiro de asignaturas",
+                "guia para retirar una materia de forma voluntaria",
+                "como realizar un retiro voluntario de cursos universitarios",
+                "procedimiento para retirar una o varias asignaturas",
+                "metodo para el retiro voluntario de materias en la universidad",
+                "cual es el proceso para retirarse de una materia voluntariamente"
+            ],
+            "responses": [
+                "Un estudiante que curse una carrera o programa podrá retirarse voluntariamente de una, algunas o todas las asignaturas, cursos o sus equivalentes en un período académico ordinario, en un plazo hasta de 15 días contados a partir de la fecha de inicio de las clases, de conformidad con el calendario académico institucional. En caso de retiro, no se contabilizará para la aplicación de la regla de segunda o tercera matrícula."
+            ]
+        },
+        {
+            "tag": "retiro_caso_fortuito",
+            "patterns": [
+                "se puede hacer un retiro por caso fortuito",
+                "es posible retirarse de materias por situaciones fortuitas",
+                "retiro de asignaturas en casos de fuerza mayor",
+                "proceso de retiro por circunstancias imprevistas en la universidad",
+                "como retirar materias por causas de fuerza mayor",
+                "puedo retirarme de cursos por situaciones inesperadas",
+                "reglas para el retiro de asignaturas por caso fortuito",
+                "como se maneja el retiro en situaciones de emergencia en la universidad",
+                "procedimiento para retirar materias debido a imprevistos",
+                "retirar asignaturas en la universidad por razones de fuerza mayor",
+                "opciones de retiro en la universidad ante situaciones fortuitas",
+                "que hacer para retirar materias en caso de emergencias imprevistas",
+                "normativa sobre retiro de cursos por causas imprevistas",
+                "se puede solicitar retiro de materias por motivos de fuerza mayor",
+                "guia para retirarse de asignaturas en situaciones excepcionales",
+                "es factible el retiro de cursos por circunstancias inesperadas"
+            ],
+            "responses": [
+                "Puede realizarse el retiro de una, algunas o todas las asignaturas por situaciones fortuitas o de fuerza mayor. Estos casos serán conocidos y aprobados por el Vicerrectorado Académico, en el momento que se presenten, de conformidad con el calendario académico institucional. En caso de retiro voluntario y retiro por caso fortuito o fuerza mayor debidamente justificado, la matrícula correspondiente a esta asignatura quedará sin efecto y no se contabilizará para la aplicación de la regla de segunda o tercera matrícula."
+            ]
+        },
+        {
+            "tag": "designacion_cupos_cursos",
+            "patterns": [
+                "como se designan los cupos en los cursos o paralelos",
+                "proceso de asignacion de cupos en asignaturas y paralelos",
+                "metodo para designar cupos en cursos universitarios",
+                "cual es el procedimiento para la designacion de cupos en paralelos",
+                "como se determinan los cupos en los cursos de la universidad",
+                "forma en que se asignan los cupos en paralelos y asignaturas",
+                "reglas para la designacion de cupos en cursos universitarios",
+                "proceso de programacion de cupos en asignaturas universitarias",
+                "criterios para la asignacion de cupos en paralelos académicos",
+                "como se establecen los cupos en los cursos de la universidad",
+                "procedimiento de designacion de cupos en asignaturas",
+                "planificacion de cupos en cursos y paralelos universitarios",
+                "sistema de asignacion de cupos en paralelos de la universidad",
+                "estrategia para determinar cupos en cursos académicos",
+                "guia para la designacion de cupos en asignaturas universitarias",
+                "normativa de asignacion de cupos en paralelos y cursos"
+            ],
+            "responses": [
+                "Los paralelos, asignaturas y cupos ofertados en el sistema académico son programados de acuerdo con la planificación académica por cada Unidad Académica debidamente aprobada por las autoridades correspondientes."
+            ]
+        },
+        {
+            "tag": "cierre_curso",
+            "patterns": [
+                "un curso puede ser cerrado",
+                "es posible el cierre de un curso en la universidad",
+                "bajo que condiciones se cierra un curso universitario",
+                "cuando se puede solicitar el cierre de una asignatura",
+                "criterios para cerrar un curso en la universidad",
+                "en que situaciones se cierra un grupo de asignatura",
+                "procedimiento para el cierre de cursos en la universidad",
+                "que pasa si no se cumple el numero de estudiantes en un curso",
+                "normativa sobre el cierre de cursos por falta de estudiantes",
+                "es factible cerrar un curso por bajo numero de matriculados",
+                "como se maneja el cierre de asignaturas en la universidad",
+                "reglas para decidir el cierre de un curso universitario",
+                "puede una unidad academica cerrar un curso",
+                "que hacer si mi curso es cerrado en la universidad",
+                "pasos a seguir cuando un curso no alcanza los estudiantes planificados",
+                "opciones si un curso universitario es cerrado por falta de inscritos",
+                "procedimientos en caso de cierre de un curso por baja matricula"
+            ],
+            "responses": [
+                "En caso de que la asignatura escogida y matriculada por los estudiantes no cumpla con el número de estudiantes planificados, la unidad académica podrá solicitar a las áreas o direcciones pertinentes (Vicerrectorado Académico, Decanato de Formación Académica y Profesional y Coordinación de Gestión de Personal Académico) el cierre del grupo de la asignatura. Si este es tu caso puedes acercarte a las oficinas de la facultad para que puedan establecerse alternativas con el fin de no vulnerar tus derechos como estudiante."
+            ]
+        },
+        {
+            "tag": "consulta_cupos_materia",
+            "patterns": [
+                "puedo consultar los cupos disponibles de una materia antes de matricularme",
+                "como puedo ver los cupos de una asignatura antes de inscribirme",
+                "es posible revisar los cupos de una materia antes de la matricula",
+                "donde puedo consultar la disponibilidad de cupos en las materias",
+                "puedo chequear los cupos libres en una asignatura antes de matricularme",
+                "metodo para verificar cupos en asignaturas antes de inscribirse",
+                "procedimiento para consultar cupos disponibles en una materia",
+                "forma de revisar los cupos de una asignatura previo a la matricula",
+                "es factible ver los cupos de una materia antes de matricularse",
+                "pasos para consultar la disponibilidad de cupos en una materia",
+                "guia para verificar cupos disponibles en asignaturas antes de inscribirse",
+                "donde revisar los cupos de las materias antes de la inscripcion",
+                "puedo saber los cupos de una asignatura antes de la matricula",
+                "como acceder a la informacion de cupos disponibles en materias",
+                "consulta de cupos en asignaturas antes de realizar la matricula"
+            ],
+            "responses": [
+                "Los cupos pueden ser consultados desde el Sistema Integrado de la Universidad de Guayaquil (SIUG), no es necesario iniciar sesión para este tipo de consulta. Desde el menú debes acceder a la sección Consultas Públicas/Académico/Planificación Académica."
+            ]
+        },
+        {
+            "tag": "consulta_profesores_materia",
+            "patterns": [
+                "puedo consultar que profesores daran una materia antes de matricularme",
+                "como saber que docentes imparten una asignatura antes de inscribirme",
+                "es posible revisar quienes son los profesores de una materia antes de la matricula",
+                "donde puedo consultar los docentes de una asignatura antes de matricularme",
+                "puedo verificar los profesores de una materia antes de inscribirme",
+                "metodo para conocer los docentes de una asignatura antes de la inscripcion",
+                "proceso para revisar que profesores enseñan una materia antes de matricularse",
+                "como averiguar los profesores de una asignatura previo a la matricula",
+                "manera de consultar los docentes de una materia antes de inscribirse",
+                "pasos para saber que profesores imparten una asignatura antes de la matricula",
+                "guia para identificar los docentes de una materia antes de la inscripcion",
+                "forma de verificar los profesores de una asignatura antes de matricularme",
+                "consulta de profesores para una materia antes de la matricula",
+                "como acceder a la informacion de docentes de una materia antes de inscribirse",
+                "es factible conocer los profesores de una asignatura antes de matricularse"
+            ],
+            "responses": [
+                "Puedes consultarlo desde el Sistema Integrado de la Universidad de Guayaquil (SIUG), no es necesario iniciar sesión para este tipo de consulta. Desde el menú debes acceder a la sección: Consultas Públicas/Académico/Planificación Académica."
+            ]
+        },
+        {
+            "tag": "retiro_voluntario_procedimiento",
+            "patterns": [
+                "como puedo realizar el retiro voluntario de una materia",
+                "proceso para retirar una asignatura de manera voluntaria",
+                "pasos para el retiro voluntario de una materia en la universidad",
+                "guia para realizar un retiro voluntario de cursos",
+                "instrucciones para retirarse voluntariamente de una asignatura",
+                "metodo para efectuar un retiro voluntario de materias",
+                "cual es el procedimiento para retirar una materia voluntariamente",
+                "como hacer un retiro voluntario de cursos universitarios",
+                "procedimiento para retirar asignaturas voluntariamente",
+                "pasos a seguir para el retiro voluntario de una materia",
+                "manera de solicitar un retiro voluntario de asignaturas",
+                "como gestionar el retiro voluntario de una asignatura en la universidad",
+                "formulario para el retiro voluntario de cursos en el SIUG",
+                "como solicitar el retiro de una materia por motivos personales",
+                "instrucciones para el retiro voluntario de materias en la universidad"
+            ],
+            "responses": [
+                "Para realizar un retiro voluntario deberás realizar la solicitud a través del SIUG ingresando a la sección SOLICITUDES ACADÉMICAS/RETIRO DE ASIGNATURAS, previa aceptación de la declaración de responsabilidad y en conformidad con las fechas establecidas en el calendario académico. En caso de ser un retiro por caso fortuito se debe adjuntar en formato pdf un documento debidamente firmado por el estudiante, en donde se describa el caso fortuito o de fuerza mayor y los documentos que validen el caso; dichas solicitudes serán analizadas y procesadas por parte del Vicerrectorado Académico. En todos los casos de retiro voluntario efectivizados por el SIUG y los casos de retiro por situaciones fortuitas o de fuerza mayor que hayan sido aprobados por el Vicerrectorado Académico, la matrícula correspondiente a la o las asignaturas, cursos o sus equivalentes, quedarán sin efecto."
+            ]
+        },
+        {
+            "tag": "matricula_proyecto_vinculacion",
+            "patterns": [
+                "como puedo matricularme en un proyecto de vinculacion",
+                "proceso para inscribirse en un proyecto de vinculacion con la sociedad",
+                "pasos para participar en un proyecto de vinculacion universitario",
+                "guia para matricularse en un proyecto de vinculacion con la comunidad",
+                "instrucciones para unirse a un proyecto de vinculacion en la universidad",
+                "metodo para ser parte de un proyecto de vinculacion academico",
+                "cual es el procedimiento para participar en proyectos de vinculacion",
+                "como hacer para inscribirse en un proyecto de vinculacion",
+                "procedimiento para unirse a proyectos de vinculacion con la sociedad",
+                "pasos a seguir para participar en un proyecto de vinculacion universitaria",
+                "manera de inscribirse en proyectos de vinculacion con la comunidad",
+                "como formar parte de un proyecto de vinculacion en la facultad",
+                "proceso para ser asignado a un proyecto de vinculacion",
+                "contacto para participar en proyectos de vinculacion en la universidad",
+                "instrucciones para unirse a proyectos de vinculacion social en la facultad"
+            ],
+            "responses": [
+                "No puedes realizar una matrícula en vinculación como se hace con otros procesos. Para pertenecer a un proceso de vinculación debes comunicarte con el departamento de vinculación con la sociedad de la facultad mediante el correo electrónico fcmf.vinculacion.cisc@u.edu.ec para ser incluido a un grupo de Office Teams en donde se realizan las asignaciones a proyectos de vinculación a los estudiantes."
+            ]
+        },
+        {
+            "tag": "finalizacion_proceso_vinculacion",
+            "patterns": [
+                "como se finaliza el proceso de vinculacion",
+                "proceso para concluir la vinculacion con la sociedad",
+                "pasos para finalizar el proceso de vinculacion en la universidad",
+                "guia para completar el proceso de vinculacion con la comunidad",
+                "instrucciones para terminar la vinculacion en la universidad",
+                "metodo para concluir la vinculacion academica",
+                "cual es el procedimiento para finalizar la vinculacion",
+                "como completar el proceso de vinculacion con la sociedad",
+                "procedimiento para cerrar el proceso de vinculacion universitaria",
+                "pasos a seguir para terminar la vinculacion con la comunidad",
+                "manera de finalizar la vinculacion en proyectos sociales",
+                "como dar por terminado el proceso de vinculacion en la facultad",
+                "proceso para obtener certificado de finalizacion de vinculacion",
+                "documentacion necesaria para concluir la vinculacion en la universidad",
+                "instrucciones para cerrar el ciclo de vinculacion social en la facultad"
+            ],
+            "responses": [
+                "Para dar por finalizado el proceso de vinculación, debes obtener el certificado de finalización de vinculación en el Departamento de Vinculación con la Sociedad de la facultad. Para obtenerlo debes estar seguro de haber cumplido con las 96 horas necesarias para la finalización del proceso y haberte comunicado con el Departamento de Vinculación con la Sociedad de la facultad para que te sea especificada la documentación que deberás llevar de forma presencial."
+            ]
+        },
+        {
+            "tag": "horas_proyecto_vinculacion",
+            "patterns": [
+                "cuantas horas deben completarse para finalizar el proyecto de vinculacion con la sociedad",
+                "numero de horas necesarias para completar el proyecto de vinculacion",
+                "cantidad de horas requeridas para finalizar la vinculacion con la sociedad",
+                "total de horas para completar el proceso de vinculacion",
+                "cuantas horas se necesitan para terminar el proyecto de vinculacion social",
+                "horas minimas para finalizar un proyecto de vinculacion con la comunidad",
+                "cantidad de horas para completar la vinculacion con la sociedad",
+                "horas requeridas para concluir el proyecto de vinculacion",
+                "numero minimo de horas para el proyecto de vinculacion con la sociedad",
+                "cuantas horas son necesarias para finalizar la vinculacion universitaria",
+                "minimo de horas para completar el proceso de vinculacion social",
+                "horas necesarias para terminar la vinculacion con la comunidad",
+                "requisito de horas para finalizar un proyecto de vinculacion",
+                "cuantas horas se deben cumplir en el proyecto de vinculacion social",
+                "numero de horas para completar la vinculacion con la sociedad en la universidad"
+            ],
+            "responses": [
+                "Para completar el proceso de vinculación con la Sociedad debes completar un mínimo de 96 horas comprobables."
+            ]
+        },
+        {
+            "tag": "matriculacion_ppp",
+            "patterns": [
+                "como me matriculo a las practicas pre profesionales tambien llamadas ppp",
+                "proceso de matriculacion para las practicas pre profesionales",
+                "pasos para inscribirse en las practicas pre profesionales ppp",
+                "guia para matricularse en las practicas pre profesionales",
+                "instrucciones para la matriculacion en practicas pre profesionales",
+                "metodo para inscribirse en las ppp practicas pre profesionales",
+                "cual es el procedimiento para matricularse en las practicas pre profesionales",
+                "como hacer la matricula para las practicas pre profesionales",
+                "procedimiento para inscribirse en las practicas pre profesionales ppp",
+                "pasos a seguir para matricularse en las practicas pre profesionales",
+                "manera de inscribirse en las ppp practicas pre profesionales",
+                "como registrarse para las practicas pre profesionales en la universidad",
+                "proceso para solicitar asignacion de practicas pre profesionales",
+                "pagina para matricularse en las practicas pre profesionales",
+                "instrucciones para inscripcion en practicas pre profesionales ppp"
+            ],
+            "responses": [
+                "La matriculación a las prácticas Pre Profesionales se realiza desde la página http://179.60.136.74/ESTUDIANTES/ En donde debes iniciar sesión con las mismas credenciales que utilizas en el SIUG. En caso de cumplir con los requisitos para realizar las PPP podrás registrar la solicitud de asignación de Prácticas Pre Profesionales. Con esta solicitud se te asignará una Institución, fecha de inicio y fin, así como un tutor académico, para realizar las practicas pre profesionales."
+            ]
+        },
+        {
+            "tag": "horas_ppp",
+            "patterns": [
+                "cuantas horas deben completarse para finalizar las practicas pre profesionales",
+                "numero de horas necesarias para completar las practicas pre profesionales",
+                "cantidad de horas requeridas para finalizar las ppp",
+                "total de horas para completar el proceso de practicas pre profesionales",
+                "cuantas horas se necesitan para terminar las practicas pre profesionales",
+                "horas minimas para finalizar las practicas pre profesionales",
+                "cantidad de horas para completar el proceso ppp",
+                "horas requeridas para concluir las practicas pre profesionales",
+                "numero minimo de horas para las practicas pre profesionales",
+                "cuantas horas son necesarias para finalizar las ppp",
+                "minimo de horas para completar las practicas pre profesionales",
+                "horas necesarias para terminar las ppp",
+                "requisito de horas para finalizar las practicas pre profesionales",
+                "cuantas horas se deben cumplir en las ppp",
+                "numero de horas para completar las practicas pre profesionales"
+                ],
+                "responses": [
+                "Para completar el proceso PPP debes completar un mínimo de 240 horas comprobables."
+            ]
+        },
+        {
+            "tag": "finalizacion_proceso_ppp",
+            "patterns": [
+                "como se finaliza el proceso de practicas pre profesionales",
+                "proceso para concluir las practicas pre profesionales",
+                "pasos para finalizar el proceso de ppp en la universidad",
+                "guia para completar el proceso de practicas pre profesionales",
+                "instrucciones para terminar las practicas pre profesionales",
+                "metodo para concluir las ppp",
+                "cual es el procedimiento para finalizar las practicas pre profesionales",
+                "como completar el proceso de ppp",
+                "procedimiento para cerrar el proceso de practicas pre profesionales",
+                "pasos a seguir para terminar las ppp",
+                "manera de finalizar las practicas pre profesionales",
+                "como dar por terminado el proceso de ppp en la facultad",
+                "proceso para obtener certificado de finalizacion de ppp",
+                "documentacion necesaria para concluir las ppp en la universidad",
+                "instrucciones para cerrar el ciclo de practicas pre profesionales en la facultad"
+            ],
+            "responses": [
+                "Para dar por finalizado el proceso de PPP, debes obtener el certificado de finalización en el Departamento de Prácticas Pre Profesionales de la facultad. Para obtenerlo debes estar seguro de haber cumplido con las 240 horas necesarias para la finalización del proceso y haberte comunicado con el Departamento de Prácticas Pre Profesionales de la facultad para que te sea especificada la documentación que deberás llevar de forma presencial."
+            ]
+        },
+        {
+            "tag": "validacion_experiencia_laboral_ppp",
+            "patterns": [
+                "si ya me encuentro trabajando o ya tengo experiencia laboral puedo validarlo como mis practicas preprofesionales",
+                "es posible reconocer mi experiencia laboral como practicas pre profesionales",
+                "puedo usar mi trabajo actual como validacion para las practicas pre profesionales",
+                "como validar experiencia laboral como practicas pre profesionales",
+                "proceso para acreditar el trabajo como practicas pre profesionales",
+                "pasos para validar experiencia laboral en practicas pre profesionales",
+                "guia para hacer valer la experiencia laboral en las ppp",
+                "instrucciones para reconocer el empleo como practicas pre profesionales",
+                "metodo para acreditar trabajo actual en practicas pre profesionales",
+                "cual es el procedimiento para validar experiencia laboral en ppp",
+                "como hacer que mi trabajo cuente como practicas pre profesionales",
+                "procedimiento para usar experiencia laboral en practicas pre profesionales",
+                "pasos a seguir para validar trabajo en practicas pre profesionales",
+                "manera de hacer valer la experiencia laboral en ppp",
+                "como puedo hacer que mi experiencia laboral se reconozca como practicas pre profesionales"
+            ],
+            "responses": [
+                "Sí, puedes solicitar un reconocimiento de la experiencia laboral como prácticas pre profesionales si y solo si el trabajo que desempeñas o desempeñaste está relacionado con la carrera de Software y si tienes al menos un año de aportaciones comprobables en el IESS. Para más detalles de este proceso debes comunicarte a: fcmf.practicas.preprofesionales.cisc.cs@ug.edu.ec"
+            ]
+        },
+        {
+            "tag": "matriculacion_titulacion",
+            "patterns": [
+                "como puedo matricularme a titulacion o unidad de integracion curricular",
+                "proceso de matriculacion para titulacion en la universidad",
+                "pasos para inscribirse en unidad de integracion curricular",
+                "guia para matricularse en titulacion",
+                "instrucciones para la matriculacion en unidad de integracion curricular",
+                "metodo para inscribirse en titulacion",
+                "cual es el procedimiento para matricularse en unidad de integracion curricular",
+                "como hacer la matricula para titulacion en la universidad",
+                "procedimiento para inscribirse en titulacion",
+                "pasos a seguir para matricularse en unidad de integracion curricular",
+                "manera de inscribirse en titulacion",
+                "como registrarse para unidad de integracion curricular en la universidad",
+                "proceso para matricularse en titulacion",
+                "pagina para matricularse en unidad de integracion curricular",
+                "instrucciones para inscripcion en titulacion en la universidad"
+            ],
+            "responses": [
+                "La matrícula se realiza desde la plataforma UG CORE que puedes visitar desde este enlace: https://ugcore.ug.edu.ec/login para acceder debes ingresar las mismas credenciales que utilizas para el SIUG. Desde el menú debes ingresar a Titulación/Proceso Matriculación/Generar Solicitud. En esa sección podrás ingresar tu solicitud de matriculación y adjuntar los documentos de tu malla curricular, generada desde el SIUG y tu documento de propuesta de anteproyecto."
+            ]
+        },
+        {
+            "tag": "requisitos_ppp",
+            "patterns": [
+                "cuales son los requisitos para matricularme a las practicas pre profesionales ppp",
+                "desde que semestre puedo hacer las practicas pre profesionales ppp",
+                "que necesito para inscribirme en las practicas pre profesionales",
+                "requisitos para la matricula en practicas pre profesionales",
+                "en que momento puedo comenzar las practicas pre profesionales",
+                "condiciones para matricularme en practicas pre profesionales",
+                "cuando se puede iniciar las practicas pre profesionales en la universidad",
+                "cual es el semestre minimo para hacer practicas pre profesionales",
+                "requisitos academicos para las practicas pre profesionales",
+                "a partir de que semestre se pueden hacer las ppp",
+                "criterios para inscribirse en practicas pre profesionales",
+                "que se requiere para empezar las practicas pre profesionales en la universidad",
+                "semestre necesario para iniciar practicas pre profesionales",
+                "condiciones academicas para matricularse en las ppp",
+                "informacion sobre la matricula en practicas pre profesionales"
+            ],
+            "responses": [
+                "El único requisito que debes cumplir para poder registrar la solicitud de matrícula para realizar las práctica pre profesionales es estar en 8vo semestre."
+            ]
+        },
+        {
+            "tag": "requisitos_vinculacion_sociedad",
+            "patterns": [
+                "cuales son los requisitos para matricularme a un proyecto de vinculacion con la sociedad",
+                "desde que semestre puedo hacer vinculacion con la sociedad",
+                "que necesito para participar en un proyecto de vinculacion con la sociedad",
+                "requisitos para asignacion a proyectos de vinculacion con la sociedad",
+                "en que momento puedo comenzar la vinculacion con la sociedad",
+                "condiciones para participar en vinculacion con la sociedad",
+                "cuando se puede iniciar la vinculacion con la sociedad en la universidad",
+                "cual es el semestre minimo para realizar vinculacion con la sociedad",
+                "requisitos academicos para proyectos de vinculacion con la sociedad",
+                "a partir de que semestre se pueden hacer proyectos de vinculacion con la sociedad",
+                "criterios para participar en vinculacion con la sociedad",
+                "que se requiere para empezar la vinculacion con la sociedad en la universidad",
+                "semestre necesario para iniciar proyectos de vinculacion con la sociedad",
+                "condiciones academicas para participar en proyectos de vinculacion con la sociedad",
+                "informacion sobre requisitos para vinculacion con la sociedad"
+            ],
+            "responses": [
+                "El único requisito que debes cumplir para poder ser asignado a un proyecto de vinculación con la sociedad es estar en 8vo semestre."
+            ]
+        },
+        {
+            "tag": "requisitos_titulacion_integracion",
+            "patterns": [
+                "que requisitos debo cumplir para matricularme a titulacion o unidad de integracion curricular",
+                "desde que semestre puedo matricularme a titulacion o unidad de integracion curricular",
+                "cual es el criterio para inscribirse en titulacion o integracion curricular",
+                "requisitos para matricularse en titulacion o unidad de integracion",
+                "en que momento puedo comenzar la titulacion o unidad de integracion curricular",
+                "condiciones para inscribirse en titulacion o integracion curricular",
+                "cuando se puede empezar la titulacion o unidad de integracion en la universidad",
+                "semestre minimo para matricularse en titulacion o integracion curricular",
+                "requisitos academicos para titulacion o unidad de integracion",
+                "a partir de que semestre se matricula en titulacion o unidad de integracion",
+                "criterios para registrarse en titulacion o integracion curricular",
+                "requisitos para empezar la titulacion o integracion curricular en la universidad",
+                "semestre necesario para iniciar titulacion o integracion curricular",
+                "condiciones academicas para participar en titulacion o unidad de integracion",
+                "informacion sobre matricula en titulacion o integracion curricular"
+            ],
+            "responses": [
+                "Para poder registrar una solicitud de registro a Titulación o Unidad de Integración Curricular debes tener tu malla curricular aprobada hasta 9no semestre."
+            ]
+        },
+        {
+            "tag": "pago_titulacion_integracion",
+            "patterns": [
+                "debo pagar algun valor para matricularme a titulacion o unidad de integracion curricular",
+                "existe un costo de matricula para titulacion o unidad de integracion",
+                "hay que pagar para inscribirse en titulacion o integracion curricular",
+                "se cobra por matricularse en titulacion o unidad de integracion",
+                "hay tarifas para la matricula en titulacion o integracion curricular",
+                "costo de inscripcion en titulacion o unidad de integracion curricular",
+                "es necesario pagar para registrarse en titulacion o integracion",
+                "cuanto debo pagar para matricularme en titulacion o integracion curricular",
+                "se debe abonar algun valor para inscripcion en titulacion o integracion",
+                "matricula en titulacion o unidad de integracion tiene costo",
+                "informacion sobre pago de matricula en titulacion o integracion curricular",
+                "como pagar la matricula para titulacion o unidad de integracion",
+                "valor de inscripcion en titulacion o unidad de integracion curricular",
+                "hay costos asociados a la matricula en titulacion o integracion",
+                "consulta sobre tarifas de matricula para titulacion o integracion curricular"
+            ],
+            "responses": [
+                "Al igual que con cualquier otra materia, si se trata de una primera matrícula y aun mantienes la gratuidad, no debes pagar ningún valor para poder registrarte. En caso de tratarse de una segunda matrícula debes consultar el valor que debes pagar en la orden de pago generada después de registrarte en UG CORE o desde la sección ORDEN DE PAGO en el SIUG."
+            ]
+        },
+        {
+            "tag": "requisitos_horario_nocturno",
+            "patterns": [
+                "cuales son los requisitos para registrarse en el horario nocturno",
+                "que necesito para inscribirme en la jornada nocturna",
+                "requisitos para la inscripcion en el turno de noche",
+                "condiciones para matricularse en el horario nocturno",
+                "que se requiere para acceder al turno nocturno en la universidad",
+                "criterios para inscribirse en clases nocturnas",
+                "documentacion necesaria para el horario de noche en la universidad",
+                "que documentos necesito para el turno nocturno",
+                "como puedo inscribirme en la jornada nocturna de la universidad",
+                "requisitos para ser parte del horario nocturno en la universidad",
+                "informacion sobre la inscripcion en el turno de noche",
+                "que se necesita para matricularse en clases nocturnas",
+                "documentos requeridos para el horario nocturno",
+                "proceso de inscripcion para el turno nocturno",
+                "guia para registrarse en el horario nocturno en la universidad"
+            ],
+            "responses": [
+                "Los estudiantes que quieran acogerse a la jornada nocturna deberán tener subido en el sistema SIUG, en la sección de DATOS PERSONALES el mecanizado del IESS, o número de RUC de la empresa de la cual es propietario."
+            ]
+        },
+        {
+            "tag": "movilidad_academica",
+            "patterns": [
+                "que es la movilidad academica",
+                "definicion de movilidad academica",
+                "en que consiste la movilidad academica en la universidad",
+                "explicacion de movilidad academica",
+                "cual es el concepto de movilidad academica",
+                "informacion sobre movilidad academica",
+                "detalle de que es la movilidad academica",
+                "como se define la movilidad academica en el ambito educativo",
+                "significado de movilidad academica en la universidad",
+                "concepto de movilidad academica en educacion superior",
+                "descripcion de la movilidad academica en la facultad",
+                "que implica la movilidad academica para estudiantes",
+                "como se entiende la movilidad academica en las universidades",
+                "explicar que es movilidad academica en la carrera universitaria",
+                "caracteristicas de la movilidad academica en el contexto academico"
+            ],
+            "responses": [
+                "Se entiende como movilidad académica, al desplazamiento que un estudiante realiza entre carreras de una misma facultad o entre carreras de diferentes facultades durante un período ordinario para desarrollar su formación académica o investigativa. Este proceso estará basado en los estudios de equiparación realizados por las unidades académicas y cuyos porcentajes de coincidencia entre asignaturas sean mayores o iguales al 80%"
+            ]
+        },
+        {
+            "tag": "mejores_promedios_ug",
+            "patterns": [
+                "que se considera como mejores promedios en la universidad de guayaquil",
+                "cuando se pueden matricular los mejores promedios",
+                "los estudiantes con mejores promedios pueden matricularse en cualquier horario",
+                "criterios para ser considerado como mejor promedio en la universidad de guayaquil",
+                "periodo de matriculacion para estudiantes con altos promedios en la ug",
+                "pueden los alumnos de alto rendimiento elegir cualquier jornada para matricularse",
+                "definicion de mejores promedios en la universidad de guayaquil",
+                "tiempo de matriculacion para los estudiantes de excelente promedio en la ug",
+                "opciones de matriculacion para alumnos con alto rendimiento academico",
+                "calificacion necesaria para ser considerado mejor promedio en la ug",
+                "flexibilidad de horario para estudiantes con altas calificaciones en la ug",
+                "requisitos para ser clasificado como mejor promedio en la universidad de guayaquil",
+                "jornadas disponibles para estudiantes sobresalientes en la ug",
+                "como se determinan los mejores promedios en la universidad de guayaquil",
+                "privilegios de matriculacion para los mejores promedios en la ug"
+            ],
+            "responses": [
+                "Se considerará como mejor promedio, los aspirantes, postulantes y estudiantes regulares cuyo promedio del período anterior inmediato, respectivamente, esté dentro de la equivalencia Excelente (9,5 – 10) de conformidad con lo que determina el Reglamento de Formación Académica y Profesional de Grado de la Universidad de Guayaquil, adicionalmente, los estudiantes de este grupo podrán matricularse en cualquiera de las jornadas establecidas (diurno, vespertino, nocturno), de acuerdo con el distributivo de matriculación."
+            ]
+        },
+        {
+            "tag": "matriculacion_temprana_promedios_altos",
+            "patterns": [
+                "los estudiantes con mejores promedios pueden matricularse antes",
+                "pueden los alumnos de alto rendimiento matricularse de manera anticipada",
+                "matriculacion temprana para estudiantes con altos promedios",
+                "privilegios de matriculacion para estudiantes con mejores calificaciones",
+                "estudiantes con altos promedios tienen prioridad en la matriculacion",
+                "alumnos sobresalientes pueden inscribirse antes en la universidad",
+                "proceso de matriculacion para estudiantes con excelentes promedios",
+                "los alumnos destacados tienen preferencia en la matriculacion",
+                "criterios de matriculacion anticipada para alumnos de alto rendimiento",
+                "procedimiento de matriculacion para los mejores promedios",
+                "ventajas en la matriculacion para estudiantes con calificaciones altas",
+                "prioridad en la matriculacion para alumnos con buen rendimiento academico",
+                "fechas de matriculacion para estudiantes con excelentes calificaciones",
+                "matriculacion prioritaria para los mejores promedios de la universidad",
+                "como se matriculan los estudiantes con altos promedios en la universidad"
+            ],
+            "responses": [
+                "En cada periodo académico se publican las fechas de matriculación, y cada nivel o semestre tiene un día y horario específico para que los estudiantes puedan matricularse. Sin embargo, los estudiantes considerados como mejor promedio pueden matricularse los primeros días de las fechas de matriculación, sin importar el nivel o semestre en el que se encuentren. Si deseas confirmar la fecha en la que debes matricularte, puedes visitar las páginas oficiales de la universidad/facultad, o ingresar al SIUG en la sección MATRICULACIÓN/PERIODO ORDINARIO, donde después de seleccionar tu carrera podrás visualizar la fecha y hora en la que puedes matricularte."
+            ]
+        },
+        {
+            "tag": "maximo_asignaturas_semestre",
+            "patterns": [
+                "cual es el numero maximo de asignaturas que puedo ver por semestre",
+                "limite de materias que se pueden cursar en un semestre",
+                "maximo de asignaturas permitidas por semestre",
+                "cuantas materias puedo tomar como maximo en un semestre",
+                "cantidad maxima de cursos que puedo inscribir por semestre",
+                "limite de asignaturas que puedo matricular en un periodo academico",
+                "cual es el tope de materias para matricular en un semestre",
+                "numero maximo de cursos por semestre en la universidad",
+                "cuantas asignaturas se pueden cursar al maximo cada semestre",
+                "maxima cantidad de materias permitidas por nivel academico",
+                "limite de inscripcion de cursos por semestre",
+                "cantidad maxima de asignaturas que puedo tomar en un semestre",
+                "maximo de materias que puedo inscribir en un periodo academico",
+                "cuantas materias se pueden matricular como maximo por semestre",
+                "numero tope de asignaturas por periodo academico"
+            ],
+            "responses": [
+                "El número máximo de asignaturas, cursos o sus equivalentes que puede matricularse un estudiante regular en un período académico, será la cantidad total de materias por aprobar que están asignadas en cada nivel o semestre, más una materia adicional."
+            ]
+        },
+        {
+            "tag": "determinacion_semestre_estudiante",
+            "patterns": [
+                "si estoy viendo materias de distintos semestres como saber en que semestre estoy",
+                "como saber en que semestre estoy",
+                "determinar mi semestre si curso asignaturas de diferentes niveles",
+                "identificar mi semestre actual con materias de varios semestres",
+                "como se que semestre estoy cursando si tengo materias variadas",
+                "metodo para saber en que semestre me encuentro",
+                "criterio para definir en que semestre estoy si tomo materias de distintos niveles",
+                "como determinar mi nivel academico con asignaturas de diferentes semestres",
+                "averiguar mi semestre con materias de varios niveles",
+                "en que semestre estoy si curso asignaturas de diferentes periodos",
+                "identificacion de mi semestre con cursos de distintos niveles",
+                "cual es mi semestre si tomo materias de varios semestres",
+                "como se clasifica mi semestre con asignaturas mezcladas",
+                "forma de saber mi semestre con materias de distintos niveles",
+                "como establecer en que semestre estoy con cursos variados"
+            ],
+            "responses": [
+                "El nivel del estudiante será en el que se encuentre cursando la mayor cantidad de asignaturas, cursos o sus equivalentes."
+            ]
+        },
+        {
+            "tag": "vencimiento_orden_pago",
+            "patterns": [
+                "cuanto tarda en vencer una orden de pago generada",
+                "que plazo tengo para pagar la orden de pago de mi matricula",
+                "tiempo de validez de una orden de pago para matricula",
+                "plazo para realizar el pago de la matricula tras generarse la orden",
+                "cuando vence la orden de pago de matricula universitaria",
+                "tiempo limite para pagar la orden de pago de la matricula",
+                "cuanto tiempo tengo para abonar la orden de pago emitida",
+                "fecha limite para pagar la orden de pago de matricula",
+                "periodo de validez de una orden de pago de matricula",
+                "hasta cuando puedo pagar la orden de pago de mi inscripcion",
+                "vencimiento de la orden de pago para matricula en la universidad",
+                "plazo maximo para pagar una orden de pago de matricula",
+                "cual es el tiempo limite para pagar la orden de pago generada",
+                "fecha de caducidad de la orden de pago de matricula",
+                "hasta que dia puedo pagar la orden de pago de matricula"
+            ],
+            "responses": [
+                "La orden de pago vencerá a los 7 días laborables, previos al inicio de los exámenes del primer parcial, conforme el calendario académico institucional. El sistema anulará el registro de matrícula de forma automática en caso de no haber realizado el pago en el tiempo establecido."
+            ]
+        },
+        {
+            "tag": "politica_reembolso_ug",
+            "patterns": [
+                "si ya he pagado los valores de la orden de pago y me retiro de la materia la universidad realiza un reembolso",
+                "la universidad hace reembolsos por retiro voluntario o anulacion de matricula",
+                "se devuelve el dinero si me retiro de una asignatura tras pagar",
+                "politica de reembolso de la universidad de guayaquil por anulacion de matricula",
+                "puedo obtener un reembolso si cancelo mi matricula despues de pagar",
+                "devolucion de pagos por retiro de materias en la universidad de guayaquil",
+                "se reembolsa el dinero en caso de retiro voluntario de asignaturas",
+                "politica de devolucion de pagos en la universidad de guayaquil",
+                "procedimiento de reembolso por anulacion de asignaturas en ug",
+                "puede la universidad de guayaquil reembolsar pagos de matricula anulada",
+                "se devuelve el dinero si anulo mi inscripcion tras el pago",
+                "reglas sobre reembolsos en la universidad de guayaquil",
+                "que pasa con el pago si me retiro de un curso en la ug",
+                "hay devolucion de dinero por retiro de cursos en la universidad de guayaquil",
+                "condiciones de reembolso en la universidad de guayaquil por retiro de materias"
+            ],
+            "responses": [
+                "La Universidad de Guayaquil no reembolsará los valores pagados en los casos de anulación y retiro de asignaturas."
+            ]
+        },
+        {
+            "tag": "pago_en_linea_orden_matricula",
+            "patterns": [
+                "puedo cancelar mi orden de pago en linea",
+                "puedo hacer el pago de mis valores pendientes en linea",
+                "como pagar la orden de pago de la universidad en linea",
+                "proceso para cancelar la matricula en linea con el banco del pacifico",
+                "pasos para pagar los valores de matricula a traves de internet",
+                "metodo en linea para abonar la orden de pago universitaria",
+                "puedo realizar el pago de mi matricula universitaria online",
+                "instrucciones para pagar en linea la matricula de la universidad de guayaquil",
+                "se puede pagar la orden de pago de la universidad por internet",
+                "como efectuar el pago online de los costos de matricula",
+                "pago en linea de la matricula universitaria en el banco del pacifico",
+                "procedimiento online para pagar la matricula en la universidad",
+                "guia para cancelar la orden de pago de la universidad a traves de la web",
+                "opciones para pagar la matricula universitaria en linea",
+                "como abonar los valores de inscripcion universitaria por internet"
+            ],
+            "responses": [
+                "Si tienes una cuenta en el Banco del Pacífico, puedes cancelar el valor de tu orden de pago desde la página web o la aplicación móvil del Banco del Pacífico. Para ello tienes que dirigirte a la sección de PAGOS Y RECARGAS/PAGOS/INSTITUCIONES. En tipo de pago deberás elegir la opción Centros Educativos y en Establecimiento debes seleccionar la Universidad de Guayaquil, en ese momento podrás ingresar el número de orden de pago y realizar la cancelación de tus valores pendientes. Recuerda que este procedimiento se trata de la cancelación de una ORDEN DEL PAGO, BAJO NINGÚN CONCEPTO, DEBERÁS REALIZAR TRANSFERENCIAS BANCARIAS, NI DEPÓSITOS A LA CUENTA DE LA UNIVERSIDAD DE GUAYAQUIL DE MANERA EN LÍNEA. LA UNIVERSIDAD DE GUAYAQUIL NO SE RESPONSABILIZA POR PROBLEMAS IMPUTABLES A LA ENTIDAD BANCARIA."
+            ]
+        },
+        {
+            "tag": "matriculacion_examen_ingles",
+            "patterns": [
+                "como puedo matricularme al examen de validacion de conocimientos de ingles",
+                "proceso para inscribirse en el examen de ingles en la universidad",
+                "pasos para matricularse en el examen de validacion de ingles",
+                "instrucciones para registrarse en el examen de conocimientos de ingles",
+                "como inscribirme en el examen de ingles a traves del SIUG",
+                "procedimiento para matricular el examen de ingles en la universidad",
+                "guia para la matriculacion del examen de validacion de ingles",
+                "donde me inscribo para el examen de ingles en el periodo academico",
+                "seccion en el SIUG para matricularme en el examen de ingles",
+                "registro para el examen de conocimientos de ingles en la universidad",
+                "como hacer la matricula para el examen de validacion de ingles",
+                "metodo de inscripcion para el examen de ingles universitario",
+                "pasos en el SIUG para matricular el examen de ingles",
+                "como registrarse para el examen de ingles en la universidad",
+                "procesode matriculación en línea para el examen de inglés"
+            ],
+            "responses": [
+            "Puedes hacerlo desde el SIUG de acuerdo a las fechas establecidas en el periodo académico. Para realizar el registro debes dirigirte a la sección MATRICULACIÓN DE COMPONENTES/REGISTRO EXAMEN DE INGLÉS."
+            ]
+        },
+        {
+            "tag": "matriculacion_examen_ubicacion_ingles",
+            "patterns": [
+                "como puedo matricularme al examen de ubicacion de ingles",
+                "proceso para inscribirse en el examen de ubicacion de ingles",
+                "pasos para matricularse en el examen de nivelacion de ingles",
+                "instrucciones para registrarse en el examen de ubicacion de ingles",
+                "como inscribirme en el examen de ubicacion de ingles a traves del SIUG",
+                "procedimiento para matricular el examen de ubicacion de ingles en la universidad",
+                "guia para la matriculacion del examen de ubicacion de ingles",
+                "donde me inscribo para el examen de ubicacion de ingles en el periodo academico",
+                "seccion en el SIUG para matricularme en el examen de nivelacion de ingles",
+                "registro para el examen de ubicacion de ingles en la universidad",
+                "como hacer la matricula para el examen de nivelacion de ingles",
+                "metodo de inscripcion para el examen de ubicacion de ingles universitario",
+                "pasos en el SIUG para matricular el examen de ubicacion de ingles",
+                "como registrarse para el examen de nivelacion de ingles en la universidad",
+                "proceso de matriculación en línea para el examen de ubicación de inglés"
+            ],
+            "responses": [
+                "Puedes hacerlo desde el SIUG de acuerdo a las fechas establecidas en el periodo académico. Para realizar el registro debes dirigirte a la sección MATRICULACIÓN DE COMPONENTES/REGISTRO EXAMEN DE INGLÉS."
+            ]
+        },
+        {
+            "tag": "consulta_nota_examen_ingles",
+            "patterns": [
+                "como puedo consultar mi nota del examen de ubicacion de ingles",
+                "donde reviso mi calificacion del examen de ingles",
+                "proceso para verificar la nota del examen de ubicacion de ingles",
+                "instrucciones para consultar la nota del examen de ingles",
+                "donde encuentro mi resultado del examen de ubicacion de ingles",
+                "como reviso mi calificacion del examen de ingles en el SIUG",
+                "pasos para ver mi nota en el examen de ingles",
+                "consulta de resultado del examen de ubicacion de ingles",
+                "seccion del SIUG para verificar nota de examen de ingles",
+                "como saber mi calificacion del examen de nivelacion de ingles",
+                "verificar mi resultado en el examen de ubicacion de ingles",
+                "donde se publican las notas del examen de ingles en la universidad",
+                "como acceder a mi nota del examen de ingles en el SIUG",
+                "ver mi calificacion del examen de ingles universitario",
+                "consulta de nota en el examen de ubicacion de ingles en la universidad"
+            ],
+            "responses": [
+                "Para consultar tu nota del examen de ubicación de inglés, debes estar atento al SIUG en la sección REGISTRO ESTUDIANTIL, en esa sección se registrará el resultado de tu prueba de acuerdo a las fechas establecidas en el calendario académico."
+            ]
+        },
+        {
+            "tag": "consulta_nota_examen_validacion_ingles",
+            "patterns": [
+                "como puedo consultar mi nota del examen de validacion de conocimientos de ingles",
+                "como puedo consultar mi nota del examen de validacion de ingles",
+                "donde reviso mi calificacion del examen de validacion de ingles",
+                "proceso para verificar la nota del examen de validacion de conocimientos de ingles",
+                "instrucciones para consultar la nota del examen de validacion de ingles",
+                "donde encuentro mi resultado del examen de validacion de ingles",
+                "como reviso mi calificacion del examen de validacion de ingles en el SIUG",
+                "pasos para ver mi nota en el examen de validacion de ingles",
+                "consulta de resultado del examen de validacion de ingles",
+                "seccion del SIUG para verificar nota de examen de validacion de ingles",
+                "como saber mi calificacion del examen de validacion de conocimientos de ingles",
+                "verificar mi resultado en el examen de validacion de ingles",
+                "donde se publican las notas del examen de validación de inglés en la universidad",
+                "como acceder a mi nota del examen de validación de inglés en el SIUG",
+                "ver mi calificación del examen de validación de inglés universitario",
+                "consulta de nota en el examen de validación de inglés en la universidad"
+                ],
+                "responses": [
+                "Para consultar tu nota del examen de validación de conocimientos de inglés, debes estar atento al SIUG en la sección REGISTRO ESTUDIANTIL, en esa sección se registrará el resultado de tu prueba de acuerdo a las fechas establecidas en el calendario académico."
+            ]
+        },
+        {
+            "tag": "consulta_calendario_academico",
+            "patterns": [
+                "donde puedo consultar el calendario academico",
+                "como puedo ver el calendario academico de la universidad",
+                "ubicacion del calendario academico en la pagina web de la universidad",
+                "en que lugar encuentro el calendario academico en las redes sociales",
+                "acceso al calendario academico a traves de la pagina oficial",
+                "proceso para encontrar el calendario academico en la web universitaria",
+                "donde se publica el calendario academico de la universidad",
+                "ubicacion del calendario academico en el SIUG",
+                "como acceder al calendario academico en la pagina de inicio del SIUG",
+                "ver el calendario academico en la ventana de anuncios del SIUG",
+                "encontrar el calendario academico en la pagina web de la universidad",
+                "consulta del calendario academico en las redes sociales oficiales de la universidad",
+                "instrucciones para localizar el calendario academico en el sitio web universitario",
+                "como localizar el calendario academico en la pagina oficial de la universidad",
+                "pasos para acceder al calendario academico en el SIUG"
+            ],
+            "responses": [
+                "El calendario académico suele ser compartido por la universidad por medio de sus redes sociales oficiales y su página web. Pero también puedes verlo en la página de inicio del SIUG, cuando abres la página de inicio te aparecerá una ventana de anuncios, allí puedes encontrar el calendario académico."
+            ]
         }
     ]
 }
