@@ -3,6 +3,7 @@ from src.model.chat import predict_class, get_response, intents
 from src.user.user_registration import is_user_registered, get_mail_from_user, register_user, unregister_user
 from src.user.user_verification import verify_otp
 from src.user.user_interactions import can_user_interact
+from src.msg.msg import get_msg
 import telebot
 from telebot import types
 from flask import Flask, request
@@ -35,7 +36,7 @@ bot.set_my_commands(commands)
 """Comando start"""
 @bot.message_handler(commands = ["start"])
 def cmd_start(message):
-    bot.reply_to(message, "Hola soy el bot UG, puedo responder a tus preguntas acerca de los pagos y matriculaciones de la carrera de software. Para poder usar este bot debes estar registrado, si aun no lo estás puedes hacero utilizando el comando /registrar")
+    bot.reply_to(message, get_msg('msg_start'))
 
 """Comando registrar"""
 @bot.message_handler(commands=["registrar"])
@@ -43,9 +44,9 @@ def handle_registrar(message):
     chat_id = message.chat.id
     if not is_user_registered(chat_id):
         otp_dict[chat_id] = {"estado": "esperando_correo"}
-        bot.send_message(chat_id, "Por favor, ingresa tu correo electrónico de la UG:")
+        bot.send_message(chat_id, get_msg('msg_get_correo'))
     else:
-        bot.send_message(chat_id, "Ya estás registrado.")
+        bot.send_message(chat_id, get_msg('msg_is_regitered'))
 
 """Comando salir"""
 @bot.message_handler(commands=["salir"])
@@ -53,9 +54,9 @@ def handle_salir(message):
     chat_id = message.chat.id
     if is_user_registered(chat_id):
         otp_dict[chat_id] = {"estado": "esperando_correo_salir"}
-        bot.send_message(chat_id, "Por favor, ingresa tu correo electrónico de la UG:")
+        bot.send_message(chat_id, get_msg('msg_get_correo'))
     else:
-        bot.send_message(chat_id, "No estás registrado.")
+        bot.send_message(chat_id, get_msg('msg_exit_is_not_regitered'))
 
 @bot.message_handler(func=lambda message: message.chat.id in otp_dict and "correo" in otp_dict[message.chat.id]["estado"])
 def handle_email_input(message):
@@ -75,13 +76,13 @@ def handle_otp_input(message):
         if secret_info["estado"] == "esperando_otp" and verify_otp(secret_info["otp"], message.text):
             del otp_dict[chat_id]  # Eliminar secreto ya utilizado
             register_user(message.text, chat_id)
-            bot.send_message(chat_id, "Verificación completada...")
+            bot.send_message(chat_id, get_msg('msg_ver_user'))
         elif secret_info["estado"] == "esperando_otp_salir" and verify_otp(secret_info["otp"], message.text):
             del otp_dict[chat_id]
             unregister_user(chat_id)
-            bot.send_message(chat_id, "Has sido dado de baja del bot.")
+            bot.send_message(chat_id, get_msg('msg_exit_user'))
         else:
-            bot.send_message(chat_id, "Código incorrecto o expirado...")
+            bot.send_message(chat_id, get_msg('msg_wrong_otp'))
     else:
         pass
     
@@ -94,9 +95,9 @@ def resp_mensajes(message):
         # Manejo del OTP si el usuario está en el proceso de registro
         handle_otp_input(message)
     elif not is_user_registered(chat_id):
-        bot.send_message(chat_id, "Debes estar registrado con el comando /registrar para poder interactuar con el bot")
+        bot.send_message(chat_id, get_msg('msg_user_is_not_registered'))
     elif not can_user_interact(chat_id):
-        bot.send_message(chat_id, "Has alcanzado el límite de 30 mensajes por día.") 
+        bot.send_message(chat_id,  get_msg('msg_limit')) 
     else:
         ints = predict_class(message.text)
         res = get_response(ints, intents)

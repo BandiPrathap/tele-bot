@@ -1,5 +1,5 @@
-from config import *
 from src.user.user_verification import generate_otp, send_otp_email
+from src.msG.msg import	get_msg
 from config.database import connect_to_db
 import re
 
@@ -40,10 +40,10 @@ def get_mail_from_user(message, bot, estado):
     if re.match(r"^[a-zA-Z0-9._%+-]+@ug\.edu\.ec$", correo):
         otp, secret = generate_otp()
         send_otp_email(correo, otp)
-        bot.send_message(chat_id, "Se ha enviado un código de verificación a tu correo electrónico...")
+        bot.send_message(chat_id, get_msg('msg_otp_to_email'))
         return secret  # Devuelve y almacena el secreto en base32
     else:
-        bot.send_message(chat_id, "Correo inválido, asegúrate de que termine en @ug.edu.ec")
+        bot.send_message(chat_id, get_msg('msg_wrong_email'))
         return None
 
 
