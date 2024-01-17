@@ -89,8 +89,8 @@ def handle_otp_input(message):
 """Mensajes del bot"""
 @bot.message_handler(content_types=["text"])
 def resp_mensajes(message):
-    global contador
     chat_id = message.chat.id
+    bot.send_chat_action(chat_id, action = 'typing')
     if chat_id in otp_dict:
         # Manejo del OTP si el usuario está en el proceso de registro
         handle_otp_input(message)
