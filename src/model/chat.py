@@ -5,9 +5,11 @@ import pickle
 import numpy as np
 from tensorflow import keras
 import nltk
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
 nltk.download('punkt')
 nltk.download('wordnet')
-from nltk.stem import WordNetLemmatizer
+nltk.download('stopwords')
 import h5py
 from keras.models import load_model
 import unicodedata
@@ -27,12 +29,15 @@ with h5py.File(model_path, 'r') as file:
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lematizer.lemmatize(word) for word in  sentence_words]
+    #sentence_words = [lematizer.lemmatize(word) for word in  sentence_words]
+    #stopwords
+    sentence_words = [lematizer.lemmatize(word) for word in sentence_words if word not in set(stopwords.words('spanish'))]
     return sentence_words
 
 def bag_of_words(sentence):
     sentence = sentence.lower()  # Convierte el texto a minúsculas
-    sentence = ''.join((c for c in unicodedata.normalize('NFD', sentence) if unicodedata.category(c) != 'Mn'))  # Eliminar tildes
+    sentence = ''.join((c for c in unicodedata.normalize('NFD', sentence) if unicodedata.category(c) != 'Mn'))
+    # Eliminar tildes
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(words)

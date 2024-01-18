@@ -467,6 +467,29 @@
             ]
         },
         {
+            "tag": "proceso_pago_orden_matricula",
+            "patterns": [
+                "como puedo pagar mi orden de pago",
+                "como puedo pagar los valores generados por una matricula",
+                "proceso para pagar la orden de pago de la universidad",
+                "instrucciones para abonar los valores de matricula",
+                "pasos para realizar el pago de mi orden de matricula",
+                "donde puedo pagar la orden de pago generada por la universidad",
+                "metodo para pagar los costos de la matricula universitaria",
+                "como efectuar el pago de los valores de matricula en la universidad",
+                "procedimiento para abonar la orden de pago del SIUG",
+                "guia para pagar la matricula universitaria en el banco del pacifico",
+                "forma de pagar los valores de inscripcion en la universidad",
+                "proceso de pago en el banco para valores de matricula universitaria",
+                "como abonar los costos generados por la inscripcion universitaria",
+                "instrucciones para pagar la matricula en el banco del pacifico",
+                "pasos a seguir para pagar la orden de pago de la universidad en el banco"
+            ],
+            "responses": [
+                "Para pagar tus valores pendientes debes imprimir tu orden de pago generada que puedes consultar desde la plataforma SIUG en la sección ORDEN DE PAGO. Con tu orden de pago debes acercarte a cualquier ventanilla del Banco del Pacífico en donde te guiarán en el proceso de pago."
+            ]
+        },
+        {
             "tag": "matriculas_orden_pago",
             "patterns": [
                 "como reviso mis ordenes de pago",
