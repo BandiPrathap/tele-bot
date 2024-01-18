@@ -13,7 +13,7 @@ def generate_otp():
 def send_otp_email(recipient_email, otp):
     """Envía el OTP al correo electrónico del usuario."""
     #Abre el html prediseñado
-    with open('email.html', 'r', encoding='utf-8') as ver_email:
+    with open('src/msg','email.html', 'r', encoding='utf-8') as ver_email:
         html = ver_email.read()
 
     # Reemplaza el marcador de posición en el HTML con el OTP
