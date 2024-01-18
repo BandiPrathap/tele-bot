@@ -64,6 +64,8 @@ def handle_email_input(message):
     estado = otp_dict[chat_id]["estado"]
     otp = get_mail_from_user(message, bot, estado)
     if otp:
+        print('ok')
+    if otp:
         otp_dict[chat_id] = {"estado": "esperando_otp_salir" if estado == "esperando_correo_salir" else "esperando_otp", "otp": otp}
 
 
