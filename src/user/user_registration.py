@@ -38,10 +38,14 @@ def get_mail_from_user(message, bot, estado):
     chat_id = message.chat.id
     correo = message.text
     if re.match(r"^[a-zA-Z0-9._%+-]+@ug\.edu\.ec$", correo):
-        otp, secret = generate_otp()
-        send_otp_email(correo, otp)
-        bot.send_message(chat_id, get_msg('msg_otp_to_email'))
-        return secret  # Devuelve y almacena el secreto en base32
+        try:
+            otp, secret = generate_otp()
+            send_otp_email(correo, otp)
+            print("ok sen_otp_email")
+            bot.send_message(chat_id, get_msg('msg_otp_to_email'))
+            return secret  # Devuelve y almacena el secreto en base32
+        except Exception as e:
+            print(f'Error al enviar el correo electrónico: {e}')
     else:
         bot.send_message(chat_id, get_msg('msg_wrong_email'))
         return None
