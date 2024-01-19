@@ -9,6 +9,9 @@ from telebot import types
 from flask import Flask, request
 import time
 from waitress import serve
+import logging
+
+logging.basicConfig(level= logging.INFO)
 
 #------------------------------------------------------------------------------
 bot = telebot.TeleBot(TELEGRAM_TOKEN) #instancia del bot

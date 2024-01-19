@@ -2,6 +2,9 @@ from src.user.user_verification import generate_otp, send_otp_email
 from src.msg.msg import	get_msg
 from config.database import connect_to_db
 import re
+import logging
+
+logging.basicConfig(level= logging.INFO)
 
 def is_user_registered(chat_id):
     # Aquí se conecta a la base de datos y verifica si el usuario está registrado
@@ -38,6 +41,7 @@ def get_mail_from_user(message, bot, estado):
     chat_id = message.chat.id
     correo = message.text
     if re.match(r"^[a-zA-Z0-9._%+-]+@ug\.edu\.ec$", correo):
+        logging.info('correo correcto')
         otp, secret = generate_otp()
         send_otp_email(correo, otp)
         bot.send_message(chat_id, get_msg('msg_otp_to_email'))
