@@ -35,7 +35,6 @@ def send_otp_email(recipient_email, otp):
         msg['To'] = recipient_email
         
         msg.attach(MIMEText(html, 'html', 'utf-8'))    
-
         # Conecta al servidor SMTP y envía el correo
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
@@ -45,10 +44,10 @@ def send_otp_email(recipient_email, otp):
         logging.info('No se envió el correo')
         logging.info(e)
 
-    def verify_otp(otp, user_input):
-        """Verifica si el OTP ingresado por el usuario es correcto."""
-        totp = pyotp.TOTP(otp, interval=300)  # 300 segundos = 5 minutos
-        return totp.verify(user_input)
+def verify_otp(otp, user_input):
+    """Verifica si el OTP ingresado por el usuario es correcto."""
+    totp = pyotp.TOTP(otp, interval=300)  # 300 segundos = 5 minutos
+    return totp.verify(user_input)
 
 
 """
