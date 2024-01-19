@@ -18,7 +18,7 @@ def send_otp_email(recipient_email, otp):
     #Abre el html prediseñado
     try:
         try: 
-            with open('src/msg','email.html', 'r', encoding='utf-8') as ver_email:
+            with open('../src/msg','email.html', 'r', encoding='utf-8') as ver_email:
                 html = ver_email.read()
         except Exception as e:
             logging.info('No se abrió el correo')
