@@ -17,6 +17,7 @@ def send_otp_email(recipient_email, otp):
         html = ver_email.read()
 
     # Reemplaza el marcador de posición en el HTML con el OTP
+    print(html)
     html = html.replace('<!--OTP-->', otp)
 
     # Configura el mensaje
