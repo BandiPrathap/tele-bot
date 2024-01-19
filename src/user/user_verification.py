@@ -1,3 +1,4 @@
+import os
 import pyotp
 import smtplib
 from email.mime.text import MIMEText
@@ -6,6 +7,8 @@ from config.config import EMAIL_SENDER, EMAIL_PASSWORD
 import logging
 
 logging.basicConfig(level= logging.INFO)
+email_file_path = os.path.join(os.path.dirname(__file__), '..', 'msg', 'email.html')
+
 
 def generate_otp():
     """Genera un OTP con una duración de 5 minutos."""
@@ -18,7 +21,11 @@ def send_otp_email(recipient_email, otp):
     #Abre el html prediseñado
     try:
         try: 
+            """
             with open('../src/msg','email.html', 'r', encoding='utf-8') as ver_email:
+                html = ver_email.read()
+            """
+            with open(email_file_path, 'r', encoding='utf-8') as ver_email:
                 html = ver_email.read()
         except Exception as e:
             logging.info('No se abrió el correo')
