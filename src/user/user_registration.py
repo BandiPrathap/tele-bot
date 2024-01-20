@@ -20,6 +20,9 @@ def register_user(correo, chat_id):
     # Aquí se conecta a la base de datos y registra el nuevo usuario
     conn = connect_to_db()
     cur = conn.cursor()
+    # Primero, eliminar cualquier registro existente con el mismo correo electrónico
+    cur.execute("DELETE FROM usuarios WHERE correo_electronico = %s;", (correo,))
+    # Registra el usuario
     cur.execute("INSERT INTO usuarios (correo_electronico, tele_chat_id, fecha_registro) VALUES (%s, %s, NOW());", (correo, chat_id))
     conn.commit()
     cur.close()

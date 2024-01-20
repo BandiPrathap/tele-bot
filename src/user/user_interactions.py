@@ -88,3 +88,15 @@ def reset_interactions_if_new_day(user_id, interaction):
 
     return interaction
 
+def get_interaction_count(chat_id):
+    user_id = get_user_id(chat_id)
+    if user_id is None:
+        return 0
+
+    interaction = get_interaction_for_today(user_id)
+    if interaction is None:
+        return 0
+
+    _, interacciones, _ = interaction
+    return interacciones
+

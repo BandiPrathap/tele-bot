@@ -18,21 +18,16 @@ def generate_otp():
 
 def send_otp_email(recipient_email, otp):
     """Envía el OTP al correo electrónico del usuario."""
-    #Abre el html prediseñado
     try:
         try: 
-            """
-            with open('../src/msg','email.html', 'r', encoding='utf-8') as ver_email:
-                html = ver_email.read()
-            """
+            #Abre el html prediseñado
             with open(email_file_path, 'r', encoding='utf-8') as ver_email:
                 html = ver_email.read()
         except Exception as e:
-            logging.info('No se abrió el correo')
+            logging.info('No se pudo acceder al correo')
             logging.info(e)
 
         # Reemplaza el marcador de posición en el HTML con el OTP
-        print(html)
         html = html.replace('<!--OTP-->', otp)
 
         # Configura el mensaje
@@ -48,7 +43,7 @@ def send_otp_email(recipient_email, otp):
             server.login(EMAIL_SENDER, EMAIL_PASSWORD)
             server.sendmail(EMAIL_SENDER, recipient_email, msg.as_string())
     except Exception as e:
-        logging.info('No se envió el correo')
+        logging.info('No se pudo enviar el correo')
         logging.info(e)
 
 def verify_otp(otp, user_input):
