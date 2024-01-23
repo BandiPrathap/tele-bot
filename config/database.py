@@ -1,20 +1,24 @@
-from config.config import DATABASE_URL
+import os
+import logging
+from dotenv import load_dotenv
+#from config.config import DATABASE_URL
 import psycopg2
 
+logging.basicConfig(level= logging.INFO)
+load_dotenv()
+
 def connect_to_db():
-    return psycopg2.connect(DATABASE_URL)
+    database_url = os.getenv('DATABASE_URL')
+    try:
+        logging.info("conexión exitosa")
+        return psycopg2.connect(database_url)
+    except psycopg2.Error as e:
+        logging.info(f"Error al conectar a la base de datos: {e}")
+        raise
+
+connect_to_db()
 
 """
-# Ejecutar una consulta simple
-try:
-    cur.execute("SELECT version();")
-    db_version = cur.fetchone()
-    print("Conexión exitosa a PostgreSQL:")
-    print(db_version)
-except psycopg2.Error as e:
-    print("Error al conectar a PostgreSQL:", e)
-finally:
-    # Cerrar el cursor y la conexión
-    cur.close()
-    conn.close()
+def connect_to_db():
+    return psycopg2.connect(DATABASE_URL)
 """

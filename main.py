@@ -1,4 +1,6 @@
-from config.config import *
+import os
+from dotenv import load_dotenv
+#from config.config import *
 from src.model.chat import predict_class, get_response, intents
 from src.user.user_registration import is_user_registered, get_mail_from_user, register_user, unregister_user
 from src.user.user_verification import verify_otp
@@ -12,10 +14,13 @@ import time
 from waitress import serve
 import logging
 
+load_dotenv('/config/.env')
+
 logging.basicConfig(level= logging.INFO)
 
 #------------------------------------------------------------------------------
-bot = telebot.TeleBot(TELEGRAM_TOKEN) #instancia del bot
+#bot = telebot.TeleBot(TELEGRAM_TOKEN) #instancia del bot
+bot = telebot.TeleBot(os.getenv('TELEGRAM_TOKEN'))
 otp_dict = {} #diccionario de estados
 web_server = Flask(__name__) #intancia del servidor de Flask
 
@@ -145,6 +150,7 @@ if __name__ == '__main__':
     # Configura el webhook
     bot.remove_webhook()
     time.sleep(1)
-    bot.set_webhook(WEBHOOK_URL)
+    #bot.set_webhook(WEBHOOK_URL)
+    bot.set_sebhook(os.getenv('WEBHOOK_URL'))
     # Inicia el servidor Flask
     serve(web_server, host="0.0.0.0", port = 5000)
