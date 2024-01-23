@@ -151,6 +151,6 @@ if __name__ == '__main__':
     bot.remove_webhook()
     time.sleep(1)
     #bot.set_webhook(WEBHOOK_URL)
-    bot.set_sebhook(os.getenv('WEBHOOK_URL'))
+    bot.set_webhook(os.getenv('WEBHOOK_URL'))
     # Inicia el servidor Flask
     serve(web_server, host="0.0.0.0", port = 5000)
