@@ -44,9 +44,9 @@ def send_otp_email(recipient_email, otp):
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
             #server.login(EMAIL_SENDER, EMAIL_PASSWORD)
-            server.login(os.getenv('EMAIL_SENDER', os.getenv('EMAIL_PASSWORD')))
+            server.login(os.getenv('EMAIL_SENDER'), os.getenv('EMAIL_PASSWORD'))
             #server.sendmail(EMAIL_SENDER, recipient_email, msg.as_string())
-            server.sendmail(os.getenv('EMAIL_SENDER', recipient_email, msg.as_string()))
+            server.sendmail(os.getenv('EMAIL_SENDER'), recipient_email, msg.as_string())
     except Exception as e:
         logging.info('No se pudo enviar el correo')
         logging.info(e)
