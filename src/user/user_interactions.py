@@ -1,7 +1,11 @@
 from datetime import datetime
 from config.database import connect_to_db
+import psycopg2
+import logging
 
+logging.basicConfig(level= logging.INFO)
 
+"""
 def get_user_id(chat_id):
     conn = connect_to_db()
     cur = conn.cursor()
@@ -11,9 +15,29 @@ def get_user_id(chat_id):
     
     cur.close()
     conn.close()
-    
+ 
+    return user_id[0] if user_id else None
+"""
+
+def get_user_id(chat_id):
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        # Llama al procedimiento almacenado
+        cur.callproc('get_user_id', [chat_id])
+        # Obtiene el resultado del procedimiento almacenado
+        user_id = cur.fetchone()
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logging.error(error)
+        user_id = None
+    finally:
+        if conn is not None:
+            conn.close()
+
     return user_id[0] if user_id else None
 
+"""
 def get_interaction_for_today(user_id):
     conn = connect_to_db()
     cur = conn.cursor()
@@ -29,7 +53,29 @@ def get_interaction_for_today(user_id):
         return reset_interactions_if_new_day(user_id, interaction)
     else:
         return None
+"""
 
+def get_interaction_for_today(user_id):
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        # Llama al procedimiento almacenado
+        cur.callproc('get_interaction_for_today', [user_id])
+        # Obtiene el resultado del procedimiento almacenado
+        interaction = cur.fetchone()
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logging.error(error)
+        interaction = None
+    finally:
+        if conn is not None:
+            conn.close()
+    if interaction:
+        return reset_interactions_if_new_day(user_id, interaction)
+    else:
+        return None
+
+"""
 def create_interaction_entry(user_id):
     conn = connect_to_db()
     cur = conn.cursor()
@@ -42,7 +88,26 @@ def create_interaction_entry(user_id):
     conn.close()
     
     return user_id, 0, today
+"""
 
+def create_interaction_entry(user_id):
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        # Llama al procedimiento almacenado
+        cur.callproc('create_interaction_entry', [user_id])
+        # Confirma los cambios
+        conn.commit()
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logging.error(error)
+    finally:
+        if conn is not None:
+            conn.close()
+    today = datetime.now()
+    return user_id, 0, today
+
+"""
 def increment_interaction_count(user_id):
     conn = connect_to_db()
     cur = conn.cursor()
@@ -52,6 +117,23 @@ def increment_interaction_count(user_id):
 
     cur.close()
     conn.close()
+"""
+
+def increment_interaction_count(user_id):
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        # Llama al procedimiento almacenado
+        cur.callproc('increment_interaction_count', [user_id])
+        # Confirma los cambios
+        conn.commit()
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logging.error(f"Error incrementando el contador de interacciones: {error}")
+    finally:
+        if conn is not None:
+            conn.close()
+
 
 def can_user_interact(chat_id):
     user_id = get_user_id(chat_id)
@@ -70,7 +152,7 @@ def can_user_interact(chat_id):
     else:
         return False
 
-
+"""
 def reset_interactions_if_new_day(user_id, interaction):
     conn = connect_to_db()
     cur = conn.cursor()
@@ -86,6 +168,25 @@ def reset_interactions_if_new_day(user_id, interaction):
     cur.close()
     conn.close()
 
+    return interaction
+"""
+def reset_interactions_if_new_day(user_id, interaction):
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        today = datetime.now().date()
+        _, _, interaction_date = interaction
+        if interaction_date < today:
+            # Llama al procedimiento almacenado
+            cur.callproc('reset_interactions_if_new_day', [user_id, interaction_date])
+            conn.commit()
+            interaction = (user_id, 0, today)
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logging.error(f"Error al resetear las interacciones: {error}")
+    finally:
+        if conn is not None:
+            conn.close()
     return interaction
 
 def get_interaction_count(chat_id):

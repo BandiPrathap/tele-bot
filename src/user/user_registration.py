@@ -1,11 +1,12 @@
 from src.user.user_verification import generate_otp, send_otp_email
 from src.msg.msg import	get_msg
 from config.database import connect_to_db
+import psycopg2
 import re
 import logging
 
 logging.basicConfig(level= logging.INFO)
-
+"""
 def is_user_registered(chat_id):
     # Aquí se conecta a la base de datos y verifica si el usuario está registrado
     conn = connect_to_db()
@@ -15,7 +16,25 @@ def is_user_registered(chat_id):
     cur.close()
     conn.close()
     return user_exists
-
+"""
+def is_user_registered(chat_id):
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        # Llama al procedimiento almacenado
+        cur.callproc('is_user_registered', [chat_id])       
+        # Obtiene el resultado del procedimiento almacenado
+        user_exists = cur.fetchone()[0]
+        
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logging.error(error)
+        user_exists = None
+    finally:
+        if conn is not None:
+            conn.close()
+    return user_exists
+"""
 def register_user(correo, chat_id):
     # Aquí se conecta a la base de datos y registra el nuevo usuario
     conn = connect_to_db()
@@ -27,7 +46,23 @@ def register_user(correo, chat_id):
     conn.commit()
     cur.close()
     conn.close()
+"""
+def register_user(correo, chat_id):
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        # Llama al procedimiento almacenado
+        cur.callproc('register_user', [correo, chat_id])
+        # Confirma los cambios
+        conn.commit()
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logging.error(error)
+    finally:
+        if conn is not None:
+            conn.close()
 
+"""
 def unregister_user(chat_id):
     # Código para eliminar el usuario de la base de datos
     conn = connect_to_db()
@@ -38,6 +73,23 @@ def unregister_user(chat_id):
     conn.commit()
     cur.close()
     conn.close()
+"""
+
+def unregister_user(chat_id):
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        # Llama al procedimiento almacenado
+        cur.callproc('unregister_user', [chat_id])
+        # Confirma los cambios
+        conn.commit()
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logging.error(error)
+    finally:
+        if conn is not None:
+            conn.close()
+
 
 """ Solicita el correo al usuario """    
 def get_mail_from_user(message, bot, estado):
