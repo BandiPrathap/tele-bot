@@ -52,7 +52,8 @@ def register_user(correo, chat_id):
         conn = connect_to_db()
         cur = conn.cursor()
         # Llama al procedimiento almacenado
-        cur.callproc('register_user', [correo, chat_id])
+        #cur.callproc('register_user', [correo, chat_id])
+        cur.execute("CALL register_user(%s, %s)", (correo, chat_id))
         # Confirma los cambios
         conn.commit()
         cur.close()
