@@ -95,7 +95,7 @@ def create_interaction_entry(user_id):
         conn = connect_to_db()
         cur = conn.cursor()
         # Llama al procedimiento almacenado
-        cur.execute('create_interaction_entry', (user_id,))
+        cur.callproc('CALL create_interaction_entry', (user_id,))
         # Confirma los cambios
         conn.commit()
         cur.close()
