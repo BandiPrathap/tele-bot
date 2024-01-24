@@ -126,7 +126,8 @@ def increment_interaction_count(user_id):
         conn = connect_to_db()
         cur = conn.cursor()
         # Llama al procedimiento almacenado
-        cur.callproc('increment_interaction_count', [user_id])
+        #cur.callproc('increment_interaction_count', [user_id])
+        cur.execute("CALL increment_interaction_count(%s)", (user_id,))
         # Confirma los cambios
         conn.commit()
         cur.close()
