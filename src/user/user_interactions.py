@@ -60,7 +60,8 @@ def get_interaction_for_today(user_id):
         conn = connect_to_db()
         cur = conn.cursor()
         # Llama al procedimiento almacenado
-        cur.callproc('get_interaction_for_today', [user_id])
+        #cur.callproc('get_interaction_for_today', [user_id])
+        cur.execute("SELECT * FROM get_interaction_for_today(%s)", (user_id,))
         # Obtiene el resultado del procedimiento almacenado
         interaction = cur.fetchone()
         cur.close()
@@ -95,7 +96,8 @@ def create_interaction_entry(user_id):
         conn = connect_to_db()
         cur = conn.cursor()
         # Llama al procedimiento almacenado
-        cur.callproc('CALL create_interaction_entry', (user_id,))
+        #cur.callproc('CALL create_interaction_entry', (user_id,))
+        cur.execute("CALL create_interaction_entry(%s)", (user_id,))
         # Confirma los cambios
         conn.commit()
         cur.close()
