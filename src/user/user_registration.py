@@ -80,7 +80,8 @@ def unregister_user(chat_id):
         conn = connect_to_db()
         cur = conn.cursor()
         # Llama al procedimiento almacenado
-        cur.callproc('unregister_user', [chat_id])
+        #cur.callproc('unregister_user', [chat_id])
+        cur.execute("CALL unregister_user(%s)", (chat_id,))
         # Confirma los cambios
         conn.commit()
         cur.close()
