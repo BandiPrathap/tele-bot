@@ -43,7 +43,7 @@ def send_otp_email(recipient_email, otp):
         # Conecta al servidor SMTP y envía el correo
         try: 
             with smtplib.SMTP('smtp.gmail.com', 587) as server: #587
-                #server.starttls()
+                server.starttls()
                 #server.login(EMAIL_SENDER, EMAIL_PASSWORD)
                 server.login(os.getenv('EMAIL_SENDER'), os.getenv('EMAIL_PASSWORD'))
                 #server.sendmail(EMAIL_SENDER, recipient_email, msg.as_string())
