@@ -48,7 +48,7 @@ def send_otp_email(recipient_email, otp):
                 server.login(os.getenv('EMAIL_SENDER'), os.getenv('EMAIL_PASSWORD'))
                 #server.sendmail(EMAIL_SENDER, recipient_email, msg.as_string())
                 server.sendmail(os.getenv('EMAIL_SENDER'), recipient_email, msg.as_string())
-        except Exception as e:
+        except smtplib.SMTPException as e:
             logging.info('No se pudo enviar el correo _N')
             logging.info(e)
     except Exception as e:
