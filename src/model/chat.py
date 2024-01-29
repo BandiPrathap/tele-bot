@@ -59,7 +59,6 @@ def predict_class(sentence):
     res = model.predict(np.array([bow]))[0]
     minimum_probability = 0.8
     results = [[i, r] for i, r in enumerate(res) if r > minimum_probability]
-    
     # Maneja la ausencia de predicciones con confianza alta
     if not results:
         return [{"intent": "desconocido", "probability": "1.0"}]
