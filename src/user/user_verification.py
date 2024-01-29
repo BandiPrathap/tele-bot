@@ -9,7 +9,7 @@ import logging
 
 load_dotenv('../../config/.env')
 logging.basicConfig(level= logging.INFO)
-email_file_path = os.path.join(os.path.dirname(__file__), '..', 'msg', 'email.html')
+email_file_path = os.path.join(os.path.dirname(__file__), '..', 'msg', 'email2.html')
 
 
 def generate_otp():
