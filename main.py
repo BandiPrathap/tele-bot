@@ -108,8 +108,9 @@ def handle_help(message):
     op2 = types.InlineKeyboardButton('¿Cómo darme de baja del bot?', callback_data='baja')
     op3 = types.InlineKeyboardButton('Más acerca del bot', callback_data='acerca_de')
     op4 = types.InlineKeyboardButton('Enlaces de interés', callback_data='links')
+    op5 = types.InlineKeyboardButton('Enlaces de interés', callback_data='actividad')
     
-    markup.add(op1, op2, op3, op4)
+    markup.add(op1, op2, op3, op4, op5)
     bot.send_message(message.chat.id, '¿En qué necesitas ayuda?', reply_markup = markup)
 
 
