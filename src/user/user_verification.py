@@ -14,7 +14,7 @@ email_file_path = os.path.join(os.path.dirname(__file__), '..', 'msg', 'email.ht
 def generate_otp():
     """Genera un OTP con una duración de 5 minutos."""
     secret = pyotp.random_base32()  # Esto debe ser una cadena en base32
-    totp = pyotp.TOTP(secret, interval=300)  # 300 segundos = 5 minutos
+    totp = pyotp.TOTP(secret, interval=600)  # 300 segundos = 5 minutos
     return totp.now(), secret
 
 def send_otp_email(recipient_email, otp):
@@ -56,5 +56,5 @@ def send_otp_email(recipient_email, otp):
 
 def verify_otp(otp, user_input):
     """Verifica si el OTP ingresado por el usuario es correcto."""
-    totp = pyotp.TOTP(otp, interval=300)  # 300 segundos = 5 minutos
+    totp = pyotp.TOTP(otp, interval=600)  # 300 segundos = 5 minutos
     return totp.verify(user_input)
