@@ -442,6 +442,7 @@
             "tag": "matriculas_registro_matricula",
             "patterns": [
                 "como reviso mis ordenes de pago",
+                "como puedo consultar mis ordenes de pago",
                 "como reviso que pagos debo realizar sobre las matriculas",
                 "no se donde revisar mis ordenes de pago",
                 "puedo revisar mis ordenes de pago en el siug",
@@ -470,6 +471,7 @@
             "tag": "proceso_pago_orden_matricula",
             "patterns": [
                 "como puedo pagar mi orden de pago",
+                "como puedo realizar el pago de mi orden de matricula",
                 "como puedo pagar los valores generados por una matricula",
                 "proceso para pagar la orden de pago de la universidad",
                 "instrucciones para abonar los valores de matricula",
@@ -1219,6 +1221,7 @@
             "tag": "pago_titulacion_integracion",
             "patterns": [
                 "debo pagar algun valor para matricularme a titulacion o unidad de integracion curricular",
+                "pago en el proceso de integracion curricular",
                 "existe un costo de matricula para titulacion o unidad de integracion",
                 "hay que pagar para inscribirse en titulacion o integracion curricular",
                 "se cobra por matricularse en titulacion o unidad de integracion",
@@ -1380,6 +1383,7 @@
             "tag": "vencimiento_orden_pago",
             "patterns": [
                 "cuanto tarda en vencer una orden de pago generada",
+                "cuando vence mi orden de pago",
                 "que plazo tengo para pagar la orden de pago de mi matricula",
                 "tiempo de validez de una orden de pago para matricula",
                 "plazo para realizar el pago de la matricula tras generarse la orden",
