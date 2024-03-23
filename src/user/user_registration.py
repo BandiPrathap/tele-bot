@@ -97,8 +97,8 @@ def unregister_user(chat_id):
 def get_mail_from_user(message, bot, estado):
     chat_id = message.chat.id
     correo = message.text
-    #if re.match(r"^[a-zA-Z0-9._%+-]+@ug\.edu\.ec$", correo):
-    if re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", correo):
+    if re.match(r"^[a-zA-Z0-9._%+-]+@ug\.edu\.ec$", correo):
+    #if re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", correo):
         logging.info('correo correcto')
         otp, secret = generate_otp()
         send_otp_email(correo, otp)
