@@ -1,24 +1,24 @@
+import mysql.connector
+from mysql.connector import Error
 import os
-import logging
 from dotenv import load_dotenv
-#from config.config import DATABASE_URL
-import psycopg2
 
-logging.basicConfig(level= logging.INFO)
+# Load environment variables
 load_dotenv()
 
 def connect_to_db():
-    database_url = os.getenv('DATABASE_URL')
     try:
-        logging.info("conexión exitosa")
-        return psycopg2.connect(database_url)
-    except psycopg2.Error as e:
-        logging.info(f"Error al conectar a la base de datos: {e}")
-        raise
-
+        connection = mysql.connector.connect(
+            host="bk9e88trktdw7imnmxnw-mysql.services.clever-cloud.com",
+            user="us8fpwzkjnzfdcxa",
+            password="E9EKCLspQW1QSXE4pXJ",
+            database="bk9e88trktdw7imnmxnw"
+        )
+        if connection.is_connected():
+            print("Successfully connected to MySQL")
+            return connection
+    except Error as e:
+        print(f"Error connecting to MySQL: {e}")
+        return None
+    
 connect_to_db()
-
-"""
-def connect_to_db():
-    return psycopg2.connect(DATABASE_URL)
-"""

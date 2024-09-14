@@ -16,6 +16,7 @@ import logging
 
 load_dotenv('/config/.env')
 
+
 logging.basicConfig(level= logging.INFO)
 
 #------------------------------------------------------------------------------
